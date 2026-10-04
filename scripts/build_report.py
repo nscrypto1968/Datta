@@ -7,7 +7,7 @@ from report_builder import new_document, render, Page, NAVY, TEAL, PAGE_HEIGHT_I
 import report_charts
 
 CHARTS = "/tmp/work/charts"
-DEFAULT_OUT = "/home/user/Datta/Summer Internship Project final By DP (expanded with 5-year data).docx"
+DEFAULT_OUT = "/home/user/Datta/DATTAGURU SIP.docx"
 
 
 def cover(doc):
