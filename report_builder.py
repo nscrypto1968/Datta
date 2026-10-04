@@ -46,7 +46,7 @@ REFERENCE_PDF = ROOT / "Rashmi Gupta Project.pdf"
 FY24_PDF = ROOT / "Annual reports of Fedbank FY 24.pdf"
 FY25_PDF = ROOT / "Annual reports of Fedbank FY 25.pdf"
 FY26_PDF = ROOT / "Annual reports of Fedbank FY 26.pdf"
-DOCX_OUT = ROOT / "Summer Intership Project final By DP.docx"
+DOCX_OUT = ROOT / "Risk Analysis at Fedbank Financial Services Ltd - Dattaguru Patil.docx"
 PDF_OUT = ROOT / "Risk Analysis at Fedbank Financial Services Ltd - Dattaguru Patil.pdf"
 
 NAVY = "#17466B"
@@ -247,6 +247,25 @@ def save_charts(workdir: Path) -> dict[str, Path]:
         ax.text(v+(0.4 if v>=0 else -0.4), b.get_y()+b.get_height()/2, f"{v:+.2f}", va="center", ha="left" if v>=0 else "right", fontsize=8, color=INK)
     finish(fig, "rate_sensitivity")
 
+    # RBI sector-wide NBFC credit-risk stress test; medium/severe absolute
+    # CRAR points are derived from the RBI baseline and incremental shocks.
+    fig, ax = plt.subplots(figsize=(7.0, 2.2))
+    stress_labels = ["Mar-26\nactual", "Mar-27\nbaseline", "Medium\n(1 SD)*", "Severe\n(2 SD)*"]
+    stress_values = [22.3, 20.8, 20.2, 20.0]
+    stress_colors = [BLUE, NAVY, ORANGE, RED]
+    bars = ax.bar(np.arange(4), stress_values, color=stress_colors, width=.58)
+    set_plot_style(ax)
+    ax.set_title("RBI NBFC Credit-Risk Stress Test | Aggregate CRAR (%)", loc="left", color=NAVY)
+    ax.set_xticks(np.arange(4), stress_labels)
+    ax.set_ylim(0, 26)
+    ax.set_ylabel("CRAR (%)", color=MUTED, fontsize=8)
+    ax.axhline(15, color="#8B4B45", linestyle="--", linewidth=1, label="15% regulatory minimum")
+    ax.legend(loc="lower left", frameon=False, fontsize=6.8)
+    for ix, (bar, value) in enumerate(zip(bars, stress_values)):
+        label = f"{value:.1f}%" + ("*" if ix >= 2 else "")
+        ax.text(bar.get_x()+bar.get_width()/2, value+.45, label, ha="center", va="bottom", fontsize=7.5, color=INK)
+    finish(fig, "sector_stress")
+
     fig, ax = plt.subplots(figsize=(7.0, 2.15))
     risks = ["ST LAP vintage / collections", "Gold collateral / custody", "ALM / funding maturity", "Cyber / data / systems", "Customer conduct / compliance"]
     levels = [3, 3, 3, 2, 2]
@@ -377,9 +396,9 @@ def draw_front_page(c, page_no, crest, letterhead, styles):
         c.drawCentredString(w/2, 651, "DRAFT FOR INSTITUTIONAL VERIFICATION — SIGNATURES TO BE COMPLETED")
         text = ("This is to certify that the summer internship project report titled “Risk Analysis at Fedbank Financial Services Ltd” "
                 "submitted by Dattaguru Patil, Roll No. M16144, student of S.Y. MMS (SYMMS), in partial fulfilment of the requirements "
-                "for the MMS degree of the University of Mumbai, records a study of the internship work stated as Risk Analyst Intern "
+                "for the MMS degree of the University of Mumbai, records a study of the internship work stated as Risk Analyst "
                 "at Fedbank Financial Services Ltd from 4 April 2026 to 3 July 2026. The report combines student-supplied internship "
-                "particulars with analysis of the company’s public annual reports. The institution and project guide should review and "
+                "particulars with analysis of the company’s public disclosures and regulatory publications. The institution and project guide should review and "
                 "authenticate this certificate wording before signature.")
         p = Paragraph(html.escape(text), styles["front"])
         pw, ph = p.wrap(w-140, 190); p.drawOn(c, 70, 620-ph)
@@ -404,7 +423,7 @@ def draw_front_page(c, page_no, crest, letterhead, styles):
         rows = [
             ("Student", "Dattaguru Patil"), ("Programme", "S.Y. MMS (SYMMS)"),
             ("Roll number", "M16144"), ("Organisation", "Fedbank Financial Services Ltd"),
-            ("Role", "Risk Analyst Intern"), ("Internship period", "4 April 2026 to 3 July 2026"),
+            ("Role", "Risk Analyst"), ("Internship period", "4 April 2026 to 3 July 2026"),
         ]
         yy = 642
         for label, value in rows:
@@ -413,7 +432,7 @@ def draw_front_page(c, page_no, crest, letterhead, styles):
             yy -= 29
         c.setFont("DVS", 9.1); c.drawString(83, yy-4, "Stated workstreams")
         tasks = [
-            "Monthly preparation of performance graphs and EWS graphs (term to confirm).",
+            "Monthly preparation of “Graphs & ever Graphs” (the second term is unresolved; see p.64).",
             "Quarterly preparation support for the Risk Management Committee (RMC).",
             "Monthly risk paper preparation and portfolio commentary.",
             "Risk-policy trigger versus actual-performance monitoring.",
@@ -432,7 +451,7 @@ def draw_front_page(c, page_no, crest, letterhead, styles):
         c.setFont("DVSB", 13); c.drawCentredString(w/2, 650, "DECLARATION")
         text = ("I hereby declare that this project report, submitted in partial fulfilment of the requirements for the award of "
                 "Master of Management Studies (MMS) of the University of Mumbai, is my academic work. It is based on the internship "
-                "particulars stated by me and on the public annual reports identified in the bibliography. The analysis does not reproduce "
+                "particulars stated by me and on the public company disclosures and RBI publications identified in the bibliography. The analysis does not reproduce "
                 "confidential borrower records, internal Fedfina policy thresholds or unpublished committee material. It has not been "
                 "submitted to another University or Institute for the award of any degree, diploma or certificate. Any figures, calculations "
                 "and interpretations derived from company disclosures are identified as such, and limitations are stated. I will verify all "
@@ -460,8 +479,9 @@ def draw_front_page(c, page_no, crest, letterhead, styles):
         paras = [
             "Summer internship training connects management concepts with workplace analysis. This project, “Risk Analysis at Fedbank Financial Services Ltd”, studies the principal risks of a retail-lending NBFC and the workstreams stated for my Risk Analyst internship from 4 April to 3 July 2026.",
             "The report focuses on FY2025–26, year ended 31 March 2026, and uses the FY2023–24 and FY2024–25 annual reports for historical context. Fedfina reported AUM of ₹20,153 crore, secured AUM of 98.9%, GNPA of 1.9%, NNPA of 1.3%, credit cost of 0.8%, PAT of ₹343.6 crore, ROA of 2.4% and ROE of 12.6%. Gold AUM reached ₹10,352 crore and the branch network stood at 757 across 17 states/UTs. These figures are company disclosures, not internal monthly internship results.",
+            "Sector context uses the RBI Financial Stability Report, June 2026: NBFC credit growth moderated to 16.6% year on year in the Upper- and Middle-Layer sample. RBI stress results are sector-wide hypothetical scenarios, not Fedfina actuals. Fedfina's Q1 FY27 results for the quarter ended 30 June were published on 15 July, after the internship ended; selected results are shown only as post-internship context, not internship observations.",
             "The analysis reviews credit and collateral risk, asset quality, capital, funding, liquidity and maturity, interest-rate sensitivity, operations, cyber risk and customer conduct. It identifies FY26 growth and secured-mix expansion as constructive, while recommending close follow-up on ST LAP vintages, Gold custody/LTV, collections sustainability, longer-tenor liquidity, funding repricing, NNPA and reserve coverage.",
-            "The stated tasks—monthly graphs and EWS graphs, quarterly RMC preparation, a monthly risk paper, policy triggers versus actuals and bounce analysis—are translated into reusable workflows and appendices. The task-list word “ever” is provisionally interpreted as EWS and requires supervisor confirmation. No unpublished policy limits, borrower records, bounce statistics or RMC material were supplied; templates are left blank rather than populated with invented values.",
+            "The stated tasks include monthly graph preparation, the unresolved phrase “Graphs & ever Graphs”, quarterly RMC preparation, a monthly risk paper, policy triggers versus actuals and bounce analysis. The meaning of “ever” is not assumed; EWS is only a possible interpretation and requires supervisor confirmation. No unpublished policy limits, borrower records, bounce statistics or RMC material were supplied; templates are left blank rather than populated with invented values.",
         ]
         y = 678
         for text in paras:
@@ -532,6 +552,27 @@ def build_pdf(charts: dict[str, Path], crest: Path, letterhead: Path):
             if y-th < bottom:
                 overflows.append("table")
             tab.drawOn(c, left, y-th); y -= th + 7
+
+        if spec.get("secondary_table"):
+            tab = pdf_table(spec["secondary_table"], content_w, styles)
+            tw, th = tab.wrap(content_w, max(30, y-bottom))
+            if y-th < bottom:
+                overflows.append("secondary table")
+            tab.drawOn(c, left, y-th); y -= th + 5
+
+        if spec.get("secondary_note"):
+            secondary_note = Paragraph(html.escape(spec["secondary_note"]), styles["note"])
+            secondary_table = Table([[secondary_note]], colWidths=[content_w])
+            secondary_table.setStyle(TableStyle([
+                ("BACKGROUND", (0,0), (-1,-1), colors.HexColor("#FFF5DF")),
+                ("BOX", (0,0), (-1,-1), .45, colors.HexColor("#E5C98E")),
+                ("LEFTPADDING", (0,0), (-1,-1), 7), ("RIGHTPADDING", (0,0), (-1,-1), 7),
+                ("TOPPADDING", (0,0), (-1,-1), 4), ("BOTTOMPADDING", (0,0), (-1,-1), 4),
+            ]))
+            nw, nh = secondary_table.wrap(content_w, max(20, y-bottom))
+            if y-nh < bottom:
+                overflows.append("secondary note")
+            secondary_table.drawOn(c, left, y-nh); y -= nh + 5
 
         if spec["note"]:
             note = Paragraph(html.escape(spec["note"]), styles["note"])
@@ -680,7 +721,7 @@ def add_front_matter(doc, crest, letterhead):
     p.add_run().add_picture(str(letterhead), width=Inches(6.5))
     add_front_paragraph(doc, "CERTIFICATE", 12, True, before=0, after=5)
     add_front_paragraph(doc, "DRAFT FOR INSTITUTIONAL VERIFICATION — SIGNATURES TO BE COMPLETED", 7.5, True, after=13)
-    text = ("This is to certify that the summer internship project report titled “Risk Analysis at Fedbank Financial Services Ltd” submitted by Dattaguru Patil, Roll No. M16144, student of S.Y. MMS (SYMMS), in partial fulfilment of the requirements for the MMS degree of the University of Mumbai, records a study of the internship work stated as Risk Analyst Intern at Fedbank Financial Services Ltd from 4 April 2026 to 3 July 2026. The report combines student-supplied internship particulars with analysis of the company’s public annual reports. The institution and project guide should review and authenticate this certificate wording before signature.")
+    text = ("This is to certify that the summer internship project report titled “Risk Analysis at Fedbank Financial Services Ltd” submitted by Dattaguru Patil, Roll No. M16144, student of S.Y. MMS (SYMMS), in partial fulfilment of the requirements for the MMS degree of the University of Mumbai, records a study of the internship work stated as Risk Analyst at Fedbank Financial Services Ltd from 4 April 2026 to 3 July 2026. The report combines student-supplied internship particulars with analysis of the company’s public disclosures and regulatory publications. The institution and project guide should review and authenticate this certificate wording before signature.")
     p = doc.add_paragraph(text); p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     p.paragraph_format.left_indent = Inches(.48); p.paragraph_format.right_indent = Inches(.48)
     p.paragraph_format.space_after = Pt(16); p.paragraph_format.line_spacing = 1.15
@@ -709,7 +750,7 @@ def add_front_matter(doc, crest, letterhead):
     rows = [
         ("Student", "Dattaguru Patil"), ("Programme", "S.Y. MMS (SYMMS)"),
         ("Roll number", "M16144"), ("Organisation", "Fedbank Financial Services Ltd"),
-        ("Role", "Risk Analyst Intern"), ("Internship period", "4 April 2026 to 3 July 2026"),
+        ("Role", "Risk Analyst"), ("Internship period", "4 April 2026 to 3 July 2026"),
     ]
     for label, value in rows:
         p=doc.add_paragraph(); p.paragraph_format.left_indent=Inches(.95); p.paragraph_format.space_after=Pt(7)
@@ -717,7 +758,7 @@ def add_front_matter(doc, crest, letterhead):
         r=p.add_run(value); r.font.name="Times New Roman"; r.font.size=Pt(9.5)
     p=doc.add_paragraph("Stated workstreams"); p.paragraph_format.left_indent=Inches(.95); p.paragraph_format.space_before=Pt(6)
     p.runs[0].bold=True; p.runs[0].font.size=Pt(9.5)
-    tasks=["Monthly preparation of performance graphs and EWS graphs (term to confirm).", "Quarterly preparation support for the Risk Management Committee (RMC).", "Monthly risk paper preparation and portfolio commentary.", "Risk-policy trigger versus actual-performance monitoring.", "Bounce analysis using approved presentment and return-code data."]
+    tasks=["Monthly preparation of “Graphs & ever Graphs” (the second term is unresolved; see p.64).", "Quarterly preparation support for the Risk Management Committee (RMC).", "Monthly risk paper preparation and portfolio commentary.", "Risk-policy trigger versus actual-performance monitoring.", "Bounce analysis using approved presentment and return-code data."]
     for task in tasks:
         p=doc.add_paragraph(style="List Bullet"); p.paragraph_format.left_indent=Inches(1.1); p.paragraph_format.first_line_indent=Inches(-.18); p.paragraph_format.space_after=Pt(4)
         p.add_run(task).font.size=Pt(8.8)
@@ -729,7 +770,7 @@ def add_front_matter(doc, crest, letterhead):
 
     # Page 4: declaration.
     add_front_paragraph(doc, "DECLARATION", 12, True, before=88, after=26)
-    declaration=("I hereby declare that this project report, submitted in partial fulfilment of the requirements for the award of Master of Management Studies (MMS) of the University of Mumbai, is my academic work. It is based on the internship particulars stated by me and on the public annual reports identified in the bibliography. The analysis does not reproduce confidential borrower records, internal Fedfina policy thresholds or unpublished committee material. It has not been submitted to another University or Institute for the award of any degree, diploma or certificate. Any figures, calculations and interpretations derived from company disclosures are identified as such, and limitations are stated. I will verify all student, institutional and internship details before final submission.")
+    declaration=("I hereby declare that this project report, submitted in partial fulfilment of the requirements for the award of Master of Management Studies (MMS) of the University of Mumbai, is my academic work. It is based on the internship particulars stated by me and on the public company disclosures and RBI publications identified in the bibliography. The analysis does not reproduce confidential borrower records, internal Fedfina policy thresholds or unpublished committee material. It has not been submitted to another University or Institute for the award of any degree, diploma or certificate. Any figures, calculations and interpretations derived from company disclosures are identified as such, and limitations are stated. I will verify all student, institutional and internship details before final submission.")
     p=doc.add_paragraph(declaration); p.alignment=WD_ALIGN_PARAGRAPH.JUSTIFY
     p.paragraph_format.left_indent=Inches(.55); p.paragraph_format.right_indent=Inches(.55); p.paragraph_format.line_spacing=1.2; p.paragraph_format.space_after=Pt(15)
     for r in p.runs: r.font.size=Pt(9.5)
@@ -757,8 +798,9 @@ def add_front_matter(doc, crest, letterhead):
     summary=[
         "Summer internship training connects management concepts with workplace analysis. This project, “Risk Analysis at Fedbank Financial Services Ltd”, studies the principal risks of a retail-lending NBFC and the workstreams stated for my Risk Analyst internship from 4 April to 3 July 2026.",
         "The report focuses on FY2025–26, year ended 31 March 2026, and uses the FY2023–24 and FY2024–25 annual reports for historical context. Fedfina reported AUM of ₹20,153 crore, secured AUM of 98.9%, GNPA of 1.9%, NNPA of 1.3%, credit cost of 0.8%, PAT of ₹343.6 crore, ROA of 2.4% and ROE of 12.6%. Gold AUM reached ₹10,352 crore and the branch network stood at 757 across 17 states/UTs. These figures are company disclosures, not internal monthly internship results.",
+        "Sector context uses the RBI Financial Stability Report, June 2026: NBFC credit growth moderated to 16.6% year on year in the Upper- and Middle-Layer sample. RBI stress results are sector-wide hypothetical scenarios, not Fedfina actuals. Fedfina's Q1 FY27 results for the quarter ended 30 June were published on 15 July, after the internship ended; selected results are shown only as post-internship context, not internship observations.",
         "The analysis reviews credit and collateral risk, asset quality, capital, funding, liquidity and maturity, interest-rate sensitivity, operations, cyber risk and customer conduct. It identifies FY26 growth and secured-mix expansion as constructive, while recommending close follow-up on ST LAP vintages, Gold custody/LTV, collections sustainability, longer-tenor liquidity, funding repricing, NNPA and reserve coverage.",
-        "The stated tasks—monthly graphs and EWS graphs, quarterly RMC preparation, a monthly risk paper, policy triggers versus actuals and bounce analysis—are translated into reusable workflows and appendices. The task-list word “ever” is provisionally interpreted as EWS and requires supervisor confirmation. No unpublished policy limits, borrower records, bounce statistics or RMC material were supplied; templates are left blank rather than populated with invented values.",
+        "The stated tasks include monthly graph preparation, the unresolved phrase “Graphs & ever Graphs”, quarterly RMC preparation, a monthly risk paper, policy triggers versus actuals and bounce analysis. The meaning of “ever” is not assumed; EWS is only a possible interpretation and requires supervisor confirmation. No unpublished policy limits, borrower records, bounce statistics or RMC material were supplied; templates are left blank rather than populated with invented values.",
     ]
     for text in summary:
         p=doc.add_paragraph(text); p.alignment=WD_ALIGN_PARAGRAPH.CENTER
@@ -871,6 +913,11 @@ def build_docx(charts: dict[str, Path], crest: Path, letterhead: Path):
         if spec["table"]:
             add_docx_table(doc,spec["table"])
             p=doc.add_paragraph(); p.paragraph_format.space_after=Pt(0); p.paragraph_format.line_spacing=1
+        if spec.get("secondary_table"):
+            add_docx_table(doc,spec["secondary_table"])
+            p=doc.add_paragraph(); p.paragraph_format.space_after=Pt(0); p.paragraph_format.line_spacing=1
+        if spec.get("secondary_note"):
+            add_docx_note(doc,spec["secondary_note"])
         if spec["note"]:
             add_docx_note(doc,spec["note"])
         if spec["sources"]:

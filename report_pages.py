@@ -53,12 +53,12 @@ pg("PRELIMINARY", "List of Figures, Tables and Abbreviations", paragraphs=[
 # 9
 pg("PROJECT AT A GLANCE", "Project at a Glance", paragraphs=[
     "This study examines how a listed, secured-lending NBFC identifies and monitors risk, and how public annual-report evidence can be translated into a disciplined monthly and quarterly reporting workflow. The central unit of analysis is Fedbank Financial Services Limited (Fedfina) for the year ended 31 March 2026.",
-    "The internship role supplied by the student is Risk Analyst Intern at Fedbank Financial Services Ltd from 4 April to 3 July 2026. The listed workstreams are monthly performance/EWS graphs, quarterly RMC preparation, a monthly risk paper, policy-trigger-versus-actual monitoring and bounce analysis. No borrower-level, monthly MIS, internal trigger or RMC minutes were supplied; therefore this report explains the work method and does not invent internal results.",
+    "The internship role supplied by the student is Risk Analyst at Fedbank Financial Services Ltd from 4 April to 3 July 2026. The listed workstreams include monthly graphs (the second category in “Graphs & ever Graphs” remains unresolved), quarterly RMC preparation, a monthly risk paper, policy-trigger-versus-actual monitoring and bounce analysis. EWS is not assumed. No borrower-level, monthly MIS, internal trigger or RMC minutes were supplied; therefore this report explains the work method and does not invent internal results.",
 ], table={"headers":["Item", "Report basis"], "rows":[
     ["Primary analytical period", "FY2025–26; year ended 31 March 2026"],
     ["Historical context", "FY2023–24 and FY2024–25 annual reports; latest five-year chart series used where noted"],
     ["Research method", "Documentary analysis, trend/ratio interpretation and risk-control design"],
-    ["Practical output", "Monthly dashboard, EWS, risk-paper, RMC and bounce-analysis templates"],
+    ["Practical output", "Monthly graph, risk-paper, RMC and bounce-analysis templates; optional EWS template only if confirmed"],
 ]}, note="The project is an academic risk-analysis report, not an audit, credit rating or investment recommendation.", sources=["Fedfina Annual Reports FY2023–24, FY2024–25 and FY2025–26 (supplied PDFs)."]),
 
 # Chapter 1, pp.10–16
@@ -72,7 +72,7 @@ pg("CHAPTER 1 · INTRODUCTION", "Need and Relevance of the Study", paragraphs=[
 ], bullets=["It builds a transparent baseline from the three annual reports supplied.", "It separates reported facts from author calculations and from unavailable internal data.", "It develops repeatable monthly and quarterly templates matching the stated job tasks."], note="A public-data study can explain the monitoring logic; it cannot replace account-level validation.", sources=["FY24 Annual Report, supplied PDF pp.13–14, 24; FY25 Annual Report, p.33; FY26 Annual Report, pp.4, 13–15."]),
 pg("CHAPTER 1 · INTRODUCTION", "Objectives of the Study", paragraphs=[
     "The project has one overall objective: to analyse the principal risks associated with Fedfina's FY2025–26 business and financial disclosures, and to translate that analysis into an academically sound description of the Risk Analyst internship workstreams. The analysis is descriptive and interpretive; it does not claim access to the Company's internal risk appetite or confidential portfolio data.",
-], bullets=["Understand Fedfina's ownership, products, operating model and FY26 strategic direction.", "Compare selected FY22–FY26 company-reported indicators using the latest annual-report series.", "Assess credit, collateral, asset-quality, funding, liquidity, interest-rate, operational and conduct risks.", "Explain monthly graphs/EWS, risk-paper, trigger-versus-actual, bounce analysis and quarterly RMC-pack workflows.", "Identify evidence-based control improvements and limitations for further study."], table={"headers":["Objective class", "Expected academic output"], "rows":[
+], bullets=["Understand Fedfina's ownership, products, operating model and FY26 strategic direction.", "Compare selected FY22–FY26 company-reported indicators using the latest annual-report series.", "Assess credit, collateral, asset-quality, funding, liquidity, interest-rate, operational and conduct risks.", "Explain monthly graphs, risk-paper, trigger-versus-actual, bounce analysis and quarterly RMC-pack workflows; include EWS only if the task wording is confirmed.", "Identify evidence-based control improvements and limitations for further study."], table={"headers":["Objective class", "Expected academic output"], "rows":[
     ["Descriptive", "Company and product profile"], ["Analytical", "Trend, ratio and risk interpretation"], ["Applied", "Reusable monitoring templates"], ["Evaluative", "Prioritised findings and recommendations"],
 ]}, sources=[]),
 pg("CHAPTER 1 · INTRODUCTION", "Scope, Period and Delimitations", paragraphs=[
@@ -415,21 +415,21 @@ pg("CHAPTER 5 · FY26 ANALYSIS", "Integrated Risk Assessment and Watchlist", par
 
 # Chapter 6, pp.62–69
 pg("CHAPTER 6 · INTERNSHIP", "Internship Profile and Role", paragraphs=[
-    "The student-provided internship particulars are: Dattaguru Patil, S.Y. MMS (SYMMS), Roll No. M16144; Risk Analyst Intern at Fedbank Financial Services Ltd; 4 April 2026 to 3 July 2026. The task list provided describes recurring reporting and analysis work. The report documents those responsibilities as a workflow and does not assert a particular unpublished monthly outcome or committee decision.",
+    "The student-provided internship particulars are: Dattaguru Patil, S.Y. MMS (SYMMS), Roll No. M16144; Risk Analyst at Fedbank Financial Services Ltd; 4 April 2026 to 3 July 2026. The task list provided describes recurring reporting and analysis work. The report documents those responsibilities as a workflow and does not assert a particular unpublished monthly outcome or committee decision.",
     "A risk analyst supports decisions by making the data accurate, comparable, timely and actionable. The analyst does not change a policy limit, make a lending decision outside delegated authority, or treat a chart as a conclusion without checking the underlying population, denominator and exception context.",
 ], table={"headers":["Internship detail", "Student-supplied information"], "rows":[
     ["Student", "Dattaguru Patil; S.Y. MMS (SYMMS)"],
     ["Roll number", "M16144"], ["Organisation", "Fedbank Financial Services Ltd"],
-    ["Role", "Risk Analyst Intern"], ["Period", "4 Apr 2026 – 3 Jul 2026"],
+    ["Role", "Risk Analyst"], ["Period", "4 Apr 2026 – 3 Jul 2026"],
 ]}, note="Confirm institute naming and certificate/signature details with the college before final submission.", sources=[]),
 pg("CHAPTER 6 · INTERNSHIP", "Monthly Portfolio Graphs: Preparation Workflow", paragraphs=[
     "A monthly graph should answer one defined question and allow a reviewer to reproduce the number. Begin with an approved data extract, record its cut-off and version, reconcile totals to the source system, freeze definitions, and segment the portfolio consistently. Show current month, prior month, same month last year where relevant, plan/trigger only when authorised, and a rolling trend.",
     "Good graph labels include unit, numerator, denominator, period, population, product and source. Use stable scales, mark restatements, distinguish stock from flow, and avoid dual axes unless they are essential and clearly explained. A chart should not hide a denominator change, a reclassification, a change in account count or the impact of business exits.",
 ], bullets=["AUM/disbursement: stock and flow shown separately.", "Asset quality: GNPA/NNPA, Stage 2, roll rates and cure by vintage.", "Collections: due, collected, digital share, bounce and recovery.", "Operations: turnaround, exceptions, complaints, reconciliation and action ageing."], note="Appendix B (p.91) provides a monthly graph catalogue; actual data fields must follow company-approved definitions.", sources=["FY25 Annual Report, supplied PDF p.33; FY26 Annual Report, p.13."]),
-pg("CHAPTER 6 · INTERNSHIP", "Early-Warning Graphs and the 'Ever Graphs' Term", paragraphs=[
-    "The task list supplied by the student says 'Preparation of Graphs & ever Graphs on monthly basis'. In this report, 'ever graphs' is provisionally interpreted as EWS (Early Warning Signals) graphs because the risk context and FY25 annual report describe monthly portfolio reviews including EWS triggers. The exact internal label should be confirmed with the internship supervisor before the report is submitted.",
-    "An EWS graph should present movement, threshold status, affected exposure, segment, ageing, root cause and action—not merely the number of alerts. Plot counts and exposure separately; distinguish new signals from persistent alerts; measure false positives, confirmed deterioration and cure; and ensure that the alert list is access-controlled. The threshold must come from approved policy or model governance.",
-], table={"headers":["EWS view", "Example display"], "rows":[
+pg("CHAPTER 6 · INTERNSHIP", "Optional EWS Graphs: Terminology Must Be Confirmed", paragraphs=[
+    "The task list supplied by the student says “Preparation of Graphs & ever Graphs on monthly basis”. The second term remains unresolved. EWS (Early Warning Signals) is one possible interpretation because the FY25 annual report discusses company EWS monitoring, but it is not treated here as a confirmed internship duty. Confirm the exact label with the supervisor before using EWS-specific task material.",
+    "If—and only if—the supervisor confirms EWS, a useful graph would present signal movement, threshold status, affected exposure, segment, ageing, root cause and action—not merely the number of alerts. Plot counts and exposure separately; distinguish new signals from persistent alerts; measure false positives, confirmed deterioration and cure; and ensure that the alert list is access-controlled. The threshold must come from approved policy or model governance.",
+], table={"headers":["Possible EWS view (if confirmed)", "Example display"], "rows":[
     ["New / open / closed alerts", "Monthly count and exposure, by product/vintage"],
     ["Ageing", "Days since trigger; owner and overdue action"],
     ["Conversion", "Alert later entering arrears / remaining current"],
@@ -438,7 +438,7 @@ pg("CHAPTER 6 · INTERNSHIP", "Early-Warning Graphs and the 'Ever Graphs' Term",
 pg("CHAPTER 6 · INTERNSHIP", "Monthly Risk Paper: Suggested Structure", paragraphs=[
     "The monthly risk paper should be decision-oriented and short enough to review. Start with a one-page executive summary, then show portfolio trends, product/vintage quality, policy trigger status, collections/bounce, funding/ALM where in remit, operational incidents, customer outcomes and open actions. Each chart should carry a source and definition; each red/amber status should have an owner and due date.",
     "A strong narrative separates fact, interpretation and action. For example: state the movement and denominator; identify the segment driving it; compare with an approved limit; explain plausible causes; state what remains unverified; and ask for a specific decision. Do not state that a strategy caused a change unless the data and review support the link.",
-], bullets=["1. Executive summary and key decisions.", "2. Portfolio, disbursement and vintage quality.", "3. EWS, bounce, cures, collections and write-offs.", "4. Funding, liquidity, capital and market-risk exceptions.", "5. Operational/cyber/compliance incidents and action tracker."], sources=["FY25 Annual Report, supplied PDF p.33; FY26 Annual Report, p.53."]),
+], bullets=["1. Executive summary and key decisions.", "2. Portfolio, disbursement and vintage quality.", "3. Bounce, cures, collections and write-offs; optional EWS only if confirmed.", "4. Funding, liquidity, capital and market-risk exceptions.", "5. Operational/cyber/compliance incidents and action tracker."], sources=["FY25 Annual Report, supplied PDF p.33; FY26 Annual Report, p.53."]),
 pg("CHAPTER 6 · INTERNSHIP", "Quarterly RMC Pack: Preparation Checklist", paragraphs=[
     "RMC preparation converts ongoing monitoring into governance-level oversight. Before the meeting, reconcile monthly data to the approved source, compare the current quarter with prior periods, confirm definitions and policy versions, refresh the risk register, collect accountable-owner commentary, validate action closure and identify decisions requested. Disagreement or uncertainty should be visible rather than suppressed.",
     "The committee pack should cover the RMC's disclosed remit: risk policy and appetite, portfolio and delinquency, product-level NPA management, liquidity, operational and cyber risk, business continuity, material incidents and implementation of prior recommendations. Board-level material should be aggregated and anonymised; customer-level detail belongs only in authorised controlled annexures.",
@@ -466,7 +466,7 @@ pg("CHAPTER 6 · INTERNSHIP", "Monthly and Quarterly Work Cadence", paragraphs=[
     "The internship dates span April to early July 2026. This report does not claim which particular live committee meetings or deliverables the intern attended because no activity log, meeting minutes or supervisor confirmation was supplied. The cadence below is a recommended description of the task workflow and should be aligned to the actual internship diary before submission.",
 ], table={"headers":["Cycle", "Analyst activity", "Control"], "rows":[
     ["Month-end", "Extract, reconcile, graph, explain exceptions", "Source-owner sign-off and version log"],
-    ["Monthly review", "Risk paper, EWS, bounce and action updates", "Peer/manager review; definitions locked"],
+    ["Monthly review", "Risk paper, bounce and action updates; optional EWS if confirmed", "Peer/manager review; definitions locked"],
     ["Quarterly RMC", "Synthesis, decision requests and prior actions", "Committee secretary / risk-owner validation"],
     ["Closeout", "Handover, learning reflection and records", "Remove confidential data from academic copy"],
 ]}, sources=[]),
@@ -557,7 +557,7 @@ pg("CHAPTER 8 · CONCLUSION", "Answers to the Research Questions", paragraphs=[
 ], note="Answers reflect public annual-report evidence and the stated study limitations.", sources=["FY24 Annual Report, supplied PDF p.31; FY25 Annual Report, p.33; FY26 Annual Report, pp.4, 14–15, 114–118."]),
 pg("CHAPTER 8 · CONCLUSION", "Conclusion", paragraphs=[
     "Fedbank Financial Services Limited's FY2025–26 disclosures present a business that has grown in scale, returned to higher reported profitability and moved materially toward secured lending. The management narrative also describes investment in underwriting systems, in-house collections and funding diversification. These are important risk-management developments for a retail NBFC serving households and small businesses.",
-    "The principal conclusion is conditional: the quality of growth matters more than growth alone. Sustained outcomes will depend on ST LAP cohort performance, Gold collateral and custody controls, mortgage recoveries, stable funding, liquidity planning, capital use, technology resilience, fair collections and robust governance. Monthly EWS, risk papers, trigger comparisons, bounce analysis and quarterly RMC reporting are useful only when definitions and source data are controlled.",
+    "The principal conclusion is conditional: the quality of growth matters more than growth alone. Sustained outcomes will depend on ST LAP cohort performance, Gold collateral and custody controls, mortgage recoveries, stable funding, liquidity planning, capital use, technology resilience, fair collections and robust governance. Monthly graphs, risk papers, trigger comparisons, bounce analysis and quarterly RMC reporting are useful only when definitions and source data are controlled; use EWS-specific content only if the supervisor confirms that “ever graphs” meant EWS.",
 ], note="The report concludes on the evidence available; it does not provide an investment opinion or assurance over internal controls.", sources=[]),
 pg("CHAPTER 8 · CONCLUSION", "Limitations and Further Study", paragraphs=[
     "The project relies on annual-report PDFs and student-supplied internship particulars. It has no access to monthly MIS, borrower-level data, internal risk policy thresholds, RMC decks/minutes, branch visit notes, management interviews, model validation reports or confidential audit findings. Annual aggregates cannot establish causality, cohort performance or the accuracy of management action attribution.",
@@ -565,7 +565,7 @@ pg("CHAPTER 8 · CONCLUSION", "Limitations and Further Study", paragraphs=[
 ], bullets=["No internal numeric trigger or bounce KPI is claimed.", "Some FY25 historic yield/funding values differ between annual reports.", "Operational disclosure is not an independent audit opinion.", "Future study should use defined, authorised and anonymised data."], sources=[]),
 pg("CHAPTER 8 · CONCLUSION", "Internship Learning Reflection", paragraphs=[
     "The risk-analyst role connects classroom finance with operational decision-making. I learned that the same movement can have different meanings depending on whether it is a stock or flow, gross or net, a company average or a cohort, a public disclosure or an internal limit. A credible analyst documents the source and denominator before presenting the chart.",
-    "The stated workstreams—monthly graphs/EWS, monthly risk paper, quarterly RMC preparation, policy-trigger-versus-actual review and bounce analysis—require accuracy, judgement and clear writing. The most valuable output is not a colourful dashboard but a verified exception, a plausible root cause, a proportionate action and evidence that the issue was resolved without compromising customer fairness or confidentiality.",
+    "The stated workstreams include monthly graphs, an unresolved second graph category, a monthly risk paper, quarterly RMC preparation, policy-trigger-versus-actual review and bounce analysis. EWS is one possible interpretation only if confirmed by the supervisor. The most valuable output is a verified exception, a plausible root cause, a proportionate action and evidence of closure without compromising customer fairness or confidentiality.",
 ], bullets=["Technical learning: trend, ratio, credit, liquidity and sensitivity analysis.", "Process learning: data validation, versioning, review and action tracking.", "Professional learning: escalation, confidentiality and balanced interpretation."], sources=[]),
 pg("CHAPTER 8 · CONCLUSION", "Final Risk Dashboard and Submission View", paragraphs=[
     "A concise senior-management view should lead with risk appetite and material exceptions, then show portfolio quality, funding/liquidity, capital, operations, customer outcomes and remediation. Each status should be tied to an approved definition and owner. A dashboard should not bury an unresolved high-severity event among routine metrics or imply that a green annual ratio removes a localised risk.",
@@ -617,9 +617,9 @@ pg("APPENDIX B", "Monthly Graph Catalogue", paragraphs=[
     ["Funding / ALM", "Maturity, lender, currency, reset", "Liquidity buffer and EaR"],
     ["Operations / conduct", "Incident, complaint, branch, ageing", "Loss, repeat issue and closure"],
 ]}, sources=[]),
-pg("APPENDIX C", "EWS Register and Validation Template", paragraphs=[
-    "This blank template supports signal governance. A signal should be tested before it is treated as an effective early-warning rule. Review both the accounts that triggered and the accounts that did not, use an approved observation window, and record changes to definitions or cut-offs.",
-], table={"headers":["EWS field", "Entry"], "rows":[
+pg("APPENDIX C", "Optional EWS Register and Validation Template (If Confirmed)", paragraphs=[
+    "Use this blank template only if the internship supervisor confirms that “ever graphs” meant EWS. Otherwise, replace it with the correct graph category. A signal should be tested before it is treated as an effective early-warning rule. Review both the accounts that triggered and the accounts that did not, use an approved observation window, and record changes to definitions or cut-offs.",
+], table={"headers":["Optional EWS field", "Entry / control"], "rows":[
     ["Signal name / rule version", "[Insert approved label and version]"],
     ["Population / source / frequency", "[Define eligible accounts and system]"],
     ["Threshold / direction / effective date", "[Insert only from approved policy]"],
@@ -633,7 +633,7 @@ pg("APPENDIX D", "Monthly Risk-Paper Template", paragraphs=[
 ], table={"headers":["Page / section", "Content prompt"], "rows":[
     ["1. Executive summary", "Three material movements; decisions required; red/amber items"],
     ["2. Portfolio", "AUM/disbursal, product/vintage quality, concentration"],
-    ["3. Credit / collections", "DPD, EWS, bounce, cure, recovery, ECL"],
+    ["3. Credit / collections", "DPD, bounce, cure, recovery, ECL; optional EWS only if confirmed"],
     ["4. ALM / capital / market", "Maturity, liquidity, repricing, sensitivity, capital"],
     ["5. Non-financial risk", "Fraud, cyber, operational, compliance, conduct"],
     ["6. Actions", "Owner, due date, status, evidence, escalation"],
@@ -699,3 +699,717 @@ pg("APPENDIX K", "Submission Checklist and Viva Questions", paragraphs=[
     "Before printing or uploading, refresh the table of contents if pages change, check that the PDF opens and all 100 pages render, verify the roll number and internship dates, and obtain the institution's required signatures. Replace provisional wording only after supervisor confirmation. Attach a genuine employer certificate if the college requires one; do not use this student-prepared particulars page as employer certification.",
 ], bullets=["Why does secured AUM not eliminate credit and operational risk?", "How are GNPA, NNPA, credit cost and ECL different?", "Why is a bounce not automatically an NPA?", "What does the FY26 maturity table's negative longer-tenor net imply—and not imply?", "Why do the FY25 and FY26 annual reports show different historic yield/cost figures?", "How would you prove a policy trigger breach and its closure?", "What controls make a quarterly RMC pack decision-useful?"], note="Report prepared 4 October 2026 from files supplied in the repository; company figures are FY2025–26 unless explicitly identified otherwise.", sources=[]),
 ]
+
+# -----------------------------------------------------------------------------
+# Evidence-led refresh (October 2026)
+# Public-sector statistics, FY26 product/risk disclosures and Q1 FY27 context.
+# The Q1 FY27 publication followed the student's stated internship end date.
+# -----------------------------------------------------------------------------
+
+def _update_page(page_number, **fields):
+    """Update one report page while retaining its fixed 7–100 page position."""
+    spec = PAGES[page_number - 7]
+    spec.update(fields)
+
+
+_update_page(8,
+    paragraphs=[
+        "Figures: five-year AUM trend (p.46); PAT and returns (p.47); yield, spread and cost of borrowings (p.48); GNPA, NNPA and provision coverage (p.49); CRAR and ROE (p.50); secured-AUM progression (p.51); RBI sector indicators (p.26); gold-collateral rules (p.29); maturity gap (p.55); interest-rate sensitivity (p.56); RBI NBFC stress scenarios (p.60); and post-internship Q1 FY27 results (p.61).",
+        "Selected abbreviations are expanded for readability. EWS means Early Warning Signals as a general risk-management term; it is not confirmed as the meaning of the internship phrase “Graphs & ever Graphs”. See the explicit terminology caveat on p.64.",
+    ],
+    note="Definitions in approved company policy or source disclosures take precedence; EWS is only one possible interpretation of the unresolved internship task wording and requires supervisor confirmation."
+)
+
+_update_page(9,
+    paragraphs=[
+        "This study examines how a listed secured-lending NBFC identifies and monitors risk, and how published sector/company evidence can be translated into a disciplined monthly and quarterly reporting workflow. The primary company period is FY2025–26, year ended 31 March 2026; sector context is drawn from RBI's June 2026 Financial Stability Report.",
+        "The student-supplied role is Risk Analyst at Fedbank Financial Services Ltd from 4 April to 3 July 2026. The supplied task wording includes “Graphs & ever Graphs”, quarterly RMC preparation, a monthly risk paper, policy-trigger-versus-actual monitoring and bounce analysis. The second graph term remains unresolved; EWS is not assumed. Fedfina's Q1 FY27 results were published on 15 July, after the placement ended, and are explicitly presented as post-internship context.",
+    ],
+    table={"headers":["Item", "Report basis"], "rows":[
+        ["Primary company-data period", "FY2025–26; year ended 31 March 2026"],
+        ["Historical context", "FY2022–FY2026 chart series, using the latest FY26 report where definitions align"],
+        ["Sector context", "RBI Financial Stability Report, June 2026; UL+ML sample, not a Fedfina peer benchmark"],
+        ["Post-internship context", "Fedfina Q1 FY27 results published 15 July 2026; not available by 3 July"],
+        ["Research method", "Documentary analysis, ratio/trend interpretation and risk-control design"],
+        ["Practical output", "Monthly graph workflow, optional EWS validation template (only if confirmed), risk-paper/RMC/bounce templates"],
+    ]},
+    note="No borrower-level data, monthly MIS, internal trigger values or RMC minutes were supplied. This is an academic analysis, not an audit, credit rating or investment recommendation.",
+    sources=["Fedfina Annual Reports FY2023–24, FY2024–25 and FY2025–26; RBI FSR, June 2026; Fedfina Q1 FY27 results and earnings-call materials (all cited later)."]
+)
+
+_update_page(13,
+    paragraphs=[
+        "Company performance is anchored to FY2025–26, ended 31 March 2026. FY24 and FY25 annual reports provide historical context. The internship period is 4 April–3 July 2026. The FY26 annual report was filed on 4 September 2026, after the placement, so it is retrospective study evidence rather than information assumed available to the intern.",
+        "The Q1 FY27 quarter ended 30 June 2026, but Fedfina published its results on 15 July—12 days after the stated internship end. Those disclosures are included only as post-internship context and are not represented as work performed, observed or available during the placement. RBI's June 2026 sector report is likewise public context, not company-specific evidence.",
+        "The scope covers company products, public risk disclosures, selected financial trends and monitoring-process design. It excludes unpublished borrower data, live month-end MIS, internal policy thresholds, committee packs/minutes, branch visits, interviews, model-validation work and market valuation.",
+    ],
+    table={"headers":["Period / boundary", "Use in this report"], "rows":[
+        ["FY2023–24 and FY2024–25", "Historical company context and cross-checks"],
+        ["FY2025–26", "Primary company-data year; year-end 31 March 2026"],
+        ["4 Apr–3 Jul 2026", "Student-stated internship dates; no daily activity log supplied"],
+        ["Q1 FY27, ended 30 Jun; released 15 Jul", "Post-internship filed/management context only; not internship-period evidence"],
+    ]},
+    note="Fiscal-year figures, quarterly reporting dates, publication dates and calendar internship months are distinct periods.",
+    sources=["FY26 Annual Report, supplied PDF pp.1, 14–15; Fedfina Q1 FY27 results, published 15 July 2026."]
+)
+
+_update_page(20,
+    paragraphs=[
+        "Gold and Mortgage are Fedfina's principal secured product families. FY26 disclosures provide enough detail to distinguish Gold, ST LAP and MT LAP by scale, origination flow and ticket size; home loans are also within the mortgage offering. The products differ in collateral, tenor, repayment pattern, verification effort and recovery path, so portfolio monitoring should be segmented rather than reduced to one secured-loan average.",
+        "The product AUM values below total ₹19,714 crore, ₹439 crore below the reported company-wide AUM of ₹20,153 crore. Product disclosures may use different scopes or presentation bases; no residual is assigned to an unreported product. FY26 Mortgage disclosures also state that 82.2% of Mortgage AUM was backed by self-occupied residential or commercial property.",
+    ],
+    table={"headers":["FY26 product", "AUM / share", "Disbursements", "Average ticket", "Distinct risk lens"], "rows":[
+        ["Gold Loans", "₹10,352 Cr / 51.4%", "₹28,326 Cr", "₹2.7 lakh", "Gold price, purity, valuation, custody and LTV"],
+        ["MT LAP", "₹5,570 Cr / 27.6%", "₹2,180 Cr", "₹72.4 lakh", "Property title, borrower cash flow, tenor and concentration"],
+        ["ST LAP", "₹3,792 Cr / 18.8%", "₹904 Cr", "₹16.1 lakh", "New-book/vintage quality, field sourcing and collections"],
+    ]},
+    note="Product figures are company disclosures; the ₹439 crore arithmetic difference is unreconciled and is not labelled as another product.",
+    sources=["FY26 Annual Report, supplied PDF pp.8–9, 13."]
+)
+
+_update_page(25,
+    paragraphs=[
+        "Management describes FY2025–26 as a year of rebuilding, re-securing and strengthening collections. Published actions include the H1 exit from the ₹886 crore business-loan portfolio, a secured-AUM share of 98.9%, rapid Gold growth, ST LAP redesign, more direct origination, a larger in-house collections team, branch co-location and a Business Rule Engine. These actions change product, underwriting, operational and funding exposures and therefore need measurable follow-up.",
+        "FY26 Gold AUM was ₹10,352 crore (+76%); Mortgage AUM was ₹9,362 crore when the disclosed ST and MT balances are added (₹3,792 crore + ₹5,570 crore). The company-wide AUM was ₹20,153 crore. Management's forward-looking FY27 aspirations are not treated as results or forecasts in this report; the analyst should test strategy through cohorts, exceptions, collections, capital, funding and customer outcomes.",
+    ],
+    note="FY26 business actions and performance are retrospective company disclosures; forward-looking management statements are not actual outcomes.",
+    sources=["FY26 Annual Report, supplied PDF pp.4, 8–10, 13–14."]
+)
+
+_update_page(26,
+    paragraphs=[
+        "A retail NBFC converts wholesale and market funding into loans to households and small businesses. The model creates value when income covers funding, operating costs, expected credit loss, capital and liquidity. A macro slowdown can affect borrower cash flows, new demand, collections and refinancing simultaneously, so sector conditions matter—but do not determine any one lender's results.",
+        "RBI's June 2026 Financial Stability Report found that credit growth in its Upper- and Middle-Layer NBFC sample moderated to 16.6% year on year by March 2026. Growth accelerated in agriculture and retail, while slowing in industry and services; gold and other retail loans were identified as key retail growth drivers. Aggregate NII and PAT growth were 9.7% and 11.8%, respectively. These are RBI sector indicators, not Fedfina figures.",
+    ],
+    table={"headers":["RBI NBFC indicator", "Published result", "Risk-analysis use"], "rows":[
+        ["Upper + Middle Layer credit growth", "16.6% y/y, March 2026", "Sector expansion moderated; not a company growth rate"],
+        ["NBFC-MFI credit growth", "14.5% y/y, March 2026", "Activity-category statistic; different from Fedfina's product mix"],
+        ["Aggregate NII / PAT growth", "9.7% / 11.8% y/y", "Sector profitability context; not a Fedfina return benchmark"],
+        ["Layer growth, matched sample", "Upper Layer 19.8%; Middle Layer 14.4% in Mar-26 (12.6% in Sep-25)", "Common-set comparison; not the all-NBFC growth rate"],
+        ["Lending composition by layer", "Upper: retail 62.2%, services 25.5%; Middle: industry 61.7%", "Portfolio shares, not growth rates"],
+        ["Sector growth pattern", "Agriculture/retail accelerated; industry/services slowed", "Different segments face different demand and loss drivers"],
+        ["Retail-loan drivers", "Gold and other retail loans", "Relevant to collateral, pricing and concentration monitoring"],
+    ]},
+    note="RBI's focus sample is NBFCs in the Upper and Middle Layers (excluding CICs, HFCs and SPDs). Sector aggregates and supervisory samples are not directly comparable with Fedfina's definitions or portfolio.",
+    sources=["RBI, Financial Stability Report, June 2026, Chapter II, paras. 2.55–2.63, Charts 2.28–2.29; official report page ID 1325."]
+)
+
+_update_page(27,
+    paragraphs=[
+        "The FY26 annual report describes the Board Risk Management Committee's remit: risk policy and mitigation, internal controls, business continuity, monitoring systems, product-level delinquency/NPA, liquidity oversight and reporting to the Board. ALCO separately oversees asset-liability, liquidity and earnings-at-risk matters. The analyst's pack should support these distinct decisions without merging committee responsibilities.",
+        "The annual report records five RMC meetings in FY2025–26: 28 April, 28 July and 17 October 2025, then 7 and 15 January 2026. Dates establish the published meeting record, not the contents of minutes or whether a particular pack was prepared quarterly. The student's stated task is quarterly RMC preparation; internal agendas and decisions were not supplied.",
+    ],
+    table={"headers":["Forum / line", "Published role or reporting evidence"], "rows":[
+        ["Board / RMC", "Risk policy, portfolio/NPA, liquidity, controls, BCP and Board reporting"],
+        ["ALCO", "Structural liquidity, funding, repricing and earnings-at-risk monitoring"],
+        ["Business (first line)", "Perform controls and correct exceptions at source"],
+        ["Risk / Compliance (second line)", "Monitor, challenge, aggregate and escalate risk"],
+        ["Internal Audit (third line)", "Test controls independently and track findings"],
+        ["FY26 RMC record", "5 meetings: 28 Apr, 28 Jul, 17 Oct 2025; 7 and 15 Jan 2026"],
+    ]},
+    sources=["FY26 Annual Report, supplied PDF p.53 (printed report p.100) and pp.114–118; FY25 Annual Report, p.33."]
+)
+
+_update_page(28,
+    paragraphs=[
+        "Credit risk reflects the probability and timing of borrower non-payment, the loss after default, and the effectiveness of collection and recovery. A secured loan can still default; the lender must also establish collateral value, legal rights, control of custody and realistic recovery timing. Product, vintage, ticket, state/district, branch, sourcing channel, borrower occupation and collateral type should therefore be monitored together.",
+        "The FY26 annual report reports secured AUM of 98.9%, Gold AUM of ₹10,352 crore, and top-five-state concentration of 75.1%. Gold, MT LAP and ST LAP together account for 97.8% of disclosed AUM shares; the remainder is not allocated here because the product disclosures do not reconcile exactly to total AUM. This concentration profile supports product- and geography-specific monitoring rather than a single collateralised-book assumption.",
+    ],
+    bullets=[
+        "Measure exposure and delinquency/loss by product, vintage, branch, geography and channel.",
+        "Separate new-book vintages from seasoned/legacy portfolios and from sold or assigned pools.",
+        "Test correlated concentrations in borrower cash flow, property markets, gold prices and collection routes.",
+    ],
+    table={"headers":["Public concentration indicator", "FY26 disclosure", "Analytical caveat"], "rows":[
+        ["Secured AUM", "98.9%", "Collateral does not remove PD, legal, custody or recovery risk"],
+        ["Gold portfolio", "₹10,352 Cr; 51.4% of AUM", "Price and physical quantity effects should be separated"],
+        ["Mortgage products", "MT LAP 27.6%; ST LAP 18.8% of AUM", "Distinct ticket sizes and seasoning; do not combine blindly"],
+        ["Top five states", "75.1% of AUM", "State average does not reveal district/branch clustering"],
+    ]},
+    note="Product shares and company-wide secured share are rounded published disclosures; they are not an internal portfolio cube.",
+    sources=["FY26 Annual Report, supplied PDF pp.4, 7–9, 116–117."]
+)
+
+_update_page(29,
+    paragraphs=[
+        "The RBI (Lending Against Gold and Silver Collateral) Directions, 2025 apply to eligible gold/silver collateral loans for consumption or income generation (including farm credit), subject to stated exceptions. Regulated entities were required to comply no later than 1 April 2026. The Directions require lender policy on borrower/portfolio limits, maximum LTV, breach action, valuation and purity standards.",
+        "Crucially, the tiered 85%/80%/75% LTV ceilings below apply to consumption loans by total borrower loan amount; they are not blanket ceilings for every income-generating gold-backed loan. Detailed repayment-capacity assessment is required when the borrower's total eligible-collateral loan exceeds ₹2.5 lakh, and the prescribed consumption-loan LTV must be maintained throughout the tenor.",
+        "Fedfina's FY26 annual report describes portfolio LTV of 60.9% and a minimum 25% margin. These are company-reported portfolio/practice disclosures; neither is an account-level compliance test. The RBI per-borrower consumption-loan limits and the company's portfolio-average LTV have different scope and should not be directly compared as if they were the same metric.",
+    ],
+    table={"headers":["Control area", "Published RBI requirement", "Scope / use"], "rows":[
+        ["Applicability / timing", "Eligible gold/silver collateral loans; compliance by 1 Apr 2026", "Consumption and income-generation loans, subject to Direction text"],
+        ["Consumption LTV tier 1", "Loan amount ≤₹2.5 lakh: max 85%", "Total consumption loan per borrower"],
+        ["Consumption LTV tier 2", ">₹2.5 lakh and ≤₹5 lakh: max 80%", "Total consumption loan per borrower"],
+        ["Consumption LTV tier 3", ">₹5 lakh: max 75%", "Total consumption loan per borrower"],
+        ["Repayment assessment", "Detailed capacity assessment above ₹2.5 lakh", "Total eligible-collateral loan to borrower"],
+        ["Ongoing LTV / auction", "Maintain LTV; reserve price and auction safeguards prescribed", "Refer to Directions for full conditions and exceptions"],
+    ]},
+    note="The RBI percentage caps above are not Fedfina internal limits and do not apply as a blanket ceiling to all gold-backed lending. Always consult the current official Direction.",
+    sources=["RBI, Reserve Bank of India (Lending Against Gold and Silver Collateral) Directions, 2025, paras. 4–5, 8, 17–20, Notification ID 12859; FY26 Annual Report, supplied PDF pp.9, 116."]
+)
+
+_update_page(30,
+    paragraphs=[
+        "The FY26 contractual maturity analysis shows a positive ₹4,976.24 crore net position within one year and a negative ₹2,050.13 crore net position after one year. Gross assets and liabilities below are converted from ₹ lakh to ₹ crore. The total net gap is positive, but it does not cancel the negative longer-tenor bucket or prove liquidity under stress.",
+        "For comparison, the FY25 report disclosed a positive within-one-year net position of ₹3,076.65 crore and a negative after-one-year position of ₹529.27 crore. The longer-tenor deficit therefore widened in the FY26 contractual table. This is a static maturity disclosure, not a complete behavioural-liquidity view or stress-survival horizon; review encumbrance, rollover, undrawn facilities, collection timing and behavioural assumptions separately.",
+    ],
+    table={"headers":["Maturity bucket at 31 Mar 2026", "Assets (₹ Cr)", "Liabilities (₹ Cr)", "Net gap (₹ Cr)"], "rows":[
+        ["Within 1 year", "10,529.12", "5,552.87", "+4,976.24"],
+        ["After 1 year", "6,345.66", "8,395.79", "−2,050.13"],
+        ["Total", "16,874.77", "13,948.69", "+2,926.08"],
+    ]},
+    note="₹ lakh values divided by 100; small differences between gross sums and published net gaps arise from rounding. The analysis is contractual and does not imply cash is unencumbered.",
+    sources=["FY26 Annual Report, supplied PDF pp.114–115; FY25 Annual Report, supplied PDF p.114 (printed report p.222)."]
+)
+
+_update_page(31,
+    paragraphs=[
+        "The FY26 financial-statement note reports the impact on PAT of a 25-basis-point rate change for loans and borrowings, holding other variables constant. On a +25 bp shock, the reported loan sensitivity is +₹6.52 crore and borrowing sensitivity −₹14.79 crore; for a −25 bp shock, the signs reverse. These are separate disclosures, not a verified net forecast.",
+        "A simple net of the two values would ignore repricing timing, fixed/floating mix, floors/caps, hedges and model assumptions. ALCO monitoring should reconcile gross and net earnings-at-risk, cash-flow repricing gaps, currency exposure and hedge effectiveness under the approved model.",
+    ],
+    table={"headers":["Disclosed shock", "Loans: PAT sensitivity", "Borrowings: PAT sensitivity"], "rows":[
+        ["+25 basis points", "+₹6.52 Cr", "−₹14.79 Cr"],
+        ["−25 basis points", "−₹6.52 Cr", "+₹14.79 Cr"],
+    ]},
+    note="The FY26 report also describes ALCO earnings-at-risk monitoring and hedging of foreign-currency borrowing exposure. Separate sensitivities must not be presented as a combined forecast.",
+    sources=["FY26 Annual Report, supplied PDF pp.15, 118."]
+)
+
+_update_page(37,
+    paragraphs=[
+        "Evidence labels distinguish assurance, source and period. Audited annual financial statements, company-reported operational indicators, unaudited limited-reviewed quarterly results, management commentary, author calculations, RBI sector statistics and hypothetical stress scenarios are not interchangeable. A narrative explanation or target is not an audited result; a stress scenario is not a forecast or a Fedfina outcome.",
+        "Q1 FY27 results were published after the internship ended and are used solely as post-internship context. The financial results are unaudited and accompanied by a limited-review report, not an audit opinion. Where operating AUM/product figures come from an earnings-call transcript, they are labelled management commentary. The report keeps RBI sample statistics separate from company data.",
+    ],
+    table={"headers":["Evidence label", "What it means", "Example in this report"], "rows":[
+        ["Audited annual", "Annual financial statements and audit opinion", "FY26 PAT and balance-sheet disclosures"],
+        ["Filed quarterly (unaudited; limited review)", "Quarterly results with limited-review conclusion", "Q1 FY27 filed ratios; post-internship context"],
+        ["Company operational disclosure", "Published KPI; definition may differ by table", "FY26 AUM, product mix and collections"],
+        ["Management commentary", "Attributed explanation or operating update", "Q1 FY27 AUM, stage mix and assignment strategy"],
+        ["RBI sector / scenario", "System sample or hypothetical stress result", "June 2026 NBFC credit and stress tests"],
+        ["Calculated / interpreted", "Transparent arithmetic or analyst implication", "AUM growth and derived stress-bar values"],
+    ]},
+    note="A data label should accompany every material number, especially where a filed ratio, management statement and calculated value appear together.",
+    sources=["FY26 Annual Report, supplied PDF pp.4, 14–15; RBI FSR, June 2026; Fedfina Q1 FY27 results and earnings-call transcript, 15 July 2026."]
+)
+
+_update_page(40,
+    title="Early-Warning Indicators: Conditional Monitoring Method",
+    paragraphs=[
+        "An early-warning signal (EWS) is a measurable indicator that may precede delinquency, loss, conduct failure or liquidity pressure; it is not, by itself, a prediction of default. Any EWS needs a defined population, source, frequency, threshold authority, validation, false-positive review, owner and action deadline. Segmentation by product, vintage, channel and geography is often more informative than one company-wide average.",
+        "Possible credit indicators include mandate failure, repeated bounce, arrears migration, bureau deterioration where lawfully available, adverse cash-flow movement, collateral-margin erosion and unusual early closure/top-up patterns. These are illustrative categories, not confirmed Fedfina internship tasks or internal rules. Use EWS reporting only if the internship supervisor confirms that “ever graphs” meant EWS; otherwise replace this method with the correct graph category.",
+    ],
+    table={"headers":["Signal family", "Illustrative measure", "Validation / follow-up"], "rows":[
+        ["Payments", "First-presentment success / repeat return", "Separate technical from customer-related causes"],
+        ["Delinquency", "DPD roll-forward and cure by vintage", "Validate account population and cut-off"],
+        ["Collateral", "LTV, valuation age and exception count", "Use approved revaluation/escalation rules"],
+        ["Operations", "Reconciliation breaks / aged complaints", "Assign owner and verify closure"],
+    ]},
+    note="EWS content is an optional analytical example, not a confirmed interpretation of the phrase “Graphs & ever Graphs”.",
+    sources=["FY25 Annual Report, supplied PDF p.33; FY26 Annual Report, p.116."]
+)
+
+_update_page(45,
+    paragraphs=[
+        "The FY26 company snapshot combines scale and profitability with asset-quality, capital and execution indicators. It is a reporting-date/annual summary, not a month-by-month cohort view. Headline ratios should be read together; none alone demonstrates sustainable, risk-adjusted growth.",
+        "Fedfina reported AUM of ₹20,153 crore, FY26 disbursements of ₹31,410 crore, secured AUM of 98.9%, GNPA 1.9%, NNPA 1.3%, credit cost 0.8%, CRAR 22.4%, PAT ₹343.6 crore, ROA 2.4% and ROE 12.6%. The FY26 five-year chart reports PCR of 32.3%, down from 40.0% in FY25. Product and maturity analysis follows on pp.52–55.",
+    ],
+    table={"headers":["FY26 indicator", "Reported value", "Risk reading"], "rows":[
+        ["AUM / disbursements", "₹20,153 Cr / ₹31,410 Cr", "Scale and flow; assess quality by product/vintage"],
+        ["Secured AUM", "98.9%", "Collateral execution and borrower PD remain material"],
+        ["GNPA / NNPA", "1.9% / 1.3%", "Gross and net measures moved differently"],
+        ["Credit cost / PCR", "0.8% / 32.3%", "Period cost and reserve coverage are distinct"],
+        ["CRAR", "22.4%", "Point-in-time capital; growth consumes risk-weighted capital"],
+        ["PAT / ROA / ROE", "₹343.6 Cr / 2.4% / 12.6%", "Recovery is positive; repeatability needs testing"],
+    ]},
+    note="FY26 company disclosures; rounded figures are not recalculated from the financial statements. See p.61 for separately labelled post-internship Q1 FY27 context.",
+    sources=["FY26 Annual Report, supplied PDF pp.4, 14–15."]
+)
+
+_update_page(47,
+    paragraphs=[
+        "PAT rose from ₹225.2 crore in FY25 to ₹343.6 crore in FY26, a calculated increase of 52.6%. In the FY26 five-year chart, ROA rose from 1.8% to 2.4% and ROE from 9.4% to 12.6%. Profit recovery is material, but the return path should be tested against core income, credit costs, funding costs, mix and one-off effects rather than attributed to a single strategy.",
+        "The annual report states that credit cost on average total assets fell by 93 basis points to 0.8% in FY26. This indicates that the profit change occurred alongside lower reported credit cost; it does not establish that lower credit cost alone caused the PAT recovery. ROE can also respond to leverage and equity movements, so both ROA and ROE belong in the review.",
+    ],
+    table={"headers":["Indicator", "FY25", "FY26", "Change / interpretation"], "rows":[
+        ["PAT", "₹225.2 Cr", "₹343.6 Cr", "+52.6% calculated"],
+        ["ROA", "1.8%", "2.4%", "+0.6 percentage points"],
+        ["ROE", "9.4%", "12.6%", "+3.2 percentage points"],
+        ["Credit cost", "About 1.7%", "0.8%", "Annual report states a 93 bp decline"],
+    ]},
+    note="PAT values are company-reported; growth and percentage-point differences are author calculations. ROA/ROE are the FY26 report's chart series.",
+    sources=["FY26 Annual Report, supplied PDF pp.4, 13–15; FY25 Annual Report, supplied PDF pp.12–13."]
+)
+
+_update_page(52,
+    paragraphs=[
+        "FY26 Gold AUM reached ₹10,352 crore, or 51.4% of total AUM, up 76% year on year. Disbursements were ₹28,326 crore and average ticket size ₹2.7 lakh. Doorstep Gold AUM was ₹1,730 crore (+108% YoY); gold under custody was 12.6 tonnes (+12%). The company attributes the broader FY26 market backdrop partly to a nearly 65% rise in domestic gold prices during calendar 2025, so value growth should not be read as pure volume growth.",
+        "The FY26 annual report discloses portfolio LTV of 60.9%. In the earnings call published 15 July, management said domestic gold prices had fallen about 15% between 31 January and 30 June 2026 and portfolio LTV on AUM had risen to 67.9%. The latter is post-internship commentary; dates and bases differ, so the values are not a like-for-like trend or account-level compliance test. Management also described adopting periodic interest-due structures following the RBI Directions; its explanation is commentary, not independent assurance.",
+    ],
+    table={"headers":["FY26 Gold disclosure", "Published value", "Risk interpretation"], "rows":[
+        ["AUM / portfolio share", "₹10,352 Cr / 51.4%", "Major concentration; test product and vintage quality"],
+        ["Disbursements / average ticket", "₹28,326 Cr / ₹2.7 lakh", "High flow; distinguish renewal, top-up and new borrowing"],
+        ["Doorstep Gold AUM", "₹1,730 Cr; +108% YoY", "Field custody, valuation and staff controls"],
+        ["Gold under custody", "12.6 tonnes; +12% YoY", "Physical inventory and packet reconciliation"],
+        ["Portfolio LTV", "60.9% at FY26 year-end", "Company portfolio measure; not a borrower-level cap"],
+    ]},
+    note="The RBI's tiered LTV ceilings apply to consumption loans by total borrower amount, not all gold-backed lending. See p.29; the Q1 FY27 price/LTV observations are management commentary published after the internship.",
+    sources=["FY26 Annual Report, supplied PDF pp.9, 13, 116; Fedfina Q1 FY27 earnings-call transcript, 15 July 2026, Gold Loans discussion."]
+)
+
+_update_page(53,
+    paragraphs=[
+        "FY26 Mortgage AUM comprised MT LAP of ₹5,570 crore and ST LAP of ₹3,792 crore. MT LAP disbursements were ₹2,180 crore with a ₹72.4 lakh average ticket; ST LAP disbursements were ₹904 crore with a ₹16.1 lakh average ticket. The annual report describes 82.2% of Mortgage AUM as backed by self-occupied residential or commercial property. Ticket, cash flow, collateral, tenor and recovery timing differ across the two books.",
+        "The FY26 product AUM figures and company-wide total do not fully reconcile: Gold, MT LAP and ST LAP sum to ₹19,714 crore versus reported AUM ₹20,153 crore. The ₹439 crore difference is left unexplained, not assigned to home loans or another category. Q1 FY27 management commentary (post-internship) gave Mortgage AUM of ₹9,777 crore (+14% YoY) and separate ticket/yield ranges; those statements are not substituted for FY26 product disclosures.",
+    ],
+    table={"headers":["FY26 mortgage metric", "ST LAP", "MT LAP"], "rows":[
+        ["AUM / share of total AUM", "₹3,792 Cr / 18.8%", "₹5,570 Cr / 27.6%"],
+        ["Annual disbursements", "₹904 Cr", "₹2,180 Cr"],
+        ["Average ticket", "₹16.1 lakh", "₹72.4 lakh"],
+        ["Origination yield", "15.1%", "12.0%"],
+        ["Q4 FY26 disbursements", "₹289 Cr; +39% QoQ", "₹632 Cr; +16% QoQ"],
+    ]},
+    note="These are FY26 annual-report operating disclosures, not monthly intern MIS. Q1 FY27 management statements are post-internship context and are labelled separately on p.61.",
+    sources=["FY26 Annual Report, supplied PDF pp.8, 13; Fedfina Q1 FY27 earnings-call transcript, 15 July 2026."]
+)
+
+_update_page(54,
+    paragraphs=[
+        "Fedfina's FY26 accounting note describes expected credit loss as an estimate based on EAD × PD × LGD, incorporating historical and forward-looking information. Stage 1 covers 0–29 DPD; Stage 2 includes 30–89 DPD and specified restructured cases; Stage 3 includes 90+ DPD and stated linked/qualitative/restructured cases. Significant increase in credit risk uses 30+ DPD plus qualitative factors such as one-time restructuring and gold-loan LTV/margin thresholds. These are company accounting disclosures, not an internal monthly MIS supplied for this study.",
+        "The FY26 Stage 3 collateral table reports different accounting classes separately. Collateral fair value is a disclosed valuation amount, not guaranteed recovery proceeds, and should not be treated as a direct offset without applying the accounting, legal and realisation assumptions in the source note.",
+    ],
+    table={"headers":["Accounting class", "Maximum exposure (₹ Cr)", "ECL (₹ Cr)", "Carrying amount (₹ Cr)", "Collateral fair value (₹ Cr)"], "rows":[
+        ["Amortised cost", "178.78", "86.89", "91.89", "334.74"],
+        ["FVOCI", "135.17", "42.01", "93.16", "129.33"],
+    ]},
+    note="Stage 3 values converted from ₹ lakh by dividing by 100. Keep Amortised Cost and FVOCI classes distinct; collateral value is not an assured recovery amount.",
+    sources=["FY26 Annual Report, supplied PDF pp.116–117 (printed report pp.226–228)."]
+)
+
+_update_page(55,
+    paragraphs=[
+        "The FY26 maturity note reports positive net assets within one year and a negative net liability position after one year. The gross asset, liability and net-gap values below are converted from ₹ lakh to ₹ crore. A positive total net balance does not remove the refinancing, timing or stress question in the negative after-one-year bucket.",
+        "Compare contractual buckets with behavioural cash flows, liquid-asset encumbrance, undrawn committed lines, collection delay, rollover concentration and stress outflows. This note is a static reporting-date analysis; it is not the full structural-liquidity statement or a survival-horizon calculation.",
+    ],
+    table={"headers":["Maturity bucket, 31 Mar 2026", "Assets (₹ Cr)", "Liabilities (₹ Cr)", "Net gap (₹ Cr)"], "rows":[
+        ["Within 1 year", "10,529.12", "5,552.87", "+4,976.24"],
+        ["After 1 year", "6,345.66", "8,395.79", "−2,050.13"],
+        ["Total", "16,874.77", "13,948.69", "+2,926.08"],
+    ]},
+    note="FY25 comparatives: within-one-year net +₹3,076.65 Cr and after-one-year net −₹529.27 Cr. The longer-tenor deficit widened; source rounding can produce small sum differences.",
+    sources=["FY26 Annual Report, supplied PDF pp.114–115; FY25 Annual Report, supplied PDF p.114 (printed report p.222)."]
+)
+
+_update_page(57,
+    paragraphs=[
+        "FY26 management disclosures report the lender base increasing from 39 to 41, an expanded USD 250 million ECB programme (about 17% of total debt), commercial paper at about 9% of debt, and a fixed-rate borrowing component near 40% versus 10% in FY25. Daily average borrowing cost eased from 8.72% in Q4 FY25 to 7.83% in Q4 FY26. Direct assignments for the year were ₹1,901 crore versus ₹2,349 crore in FY25. These movements show funding diversification and repricing, not the absence of refinancing or FX risk.",
+        "The FY26 overview's borrowing mix also reports 50% term loans, 14% direct assignments and 13% NCDs/CPs; the remaining categories should be read from the source chart and not inferred from these rounded labels. Monitor lender/instrument/currency concentration, maturity, reset, covenants, security encumbrance and hedge counterparties. Contracted funding, sanctioned undrawn lines and assumed refinancing should remain separate.",
+    ],
+    bullets=[
+        "Track top-lender share, refinancing calendar and security/covenant headroom.",
+        "Map ECB principal, hedge maturity, rollover and counterparty risk.",
+        "Link fixed/floating mix and liability reset dates to asset repricing and NII sensitivity.",
+        "Reconcile direct-assignment and co-lending balances to AUM, cash flows and risk transfer.",
+    ],
+    note="These are FY26 management disclosures. Q1 FY27 assignment income and transfer activity are separately labelled post-internship context on p.61.",
+    sources=["FY26 Annual Report, supplied PDF pp.10, 13, 15; FY26 financial-risk note, p.118."]
+)
+
+_update_page(58,
+    paragraphs=[
+        "FY26 management disclosures describe about 75% of business originated by in-house teams, DSA dependence near 25%, an internal collections team at 1.8 times FY25 levels and external-agency reliance at 0.4 times. Monthly Stage 3 recoveries reportedly rose from ₹6.5 crore to ₹14.5 crore; the report also highlights collection efficiency of 99.7%. These are company-reported operating metrics; the underlying population, calculation window and independent validation are not supplied here.",
+        "Digital mandate and collection adoption can improve evidence and reduce delay, but reconciliation, access control, vendor continuity, customer consent and failed-payment follow-up remain necessary. Recovery improvement should be paired with conduct, complaint, cost-to-collect and repeat-bounce indicators; no monthly bounce rate is inferred from the annual collection-efficiency figure.",
+    ],
+    table={"headers":["FY26 company disclosure", "Reported movement / level", "Monitoring boundary"], "rows":[
+        ["Direct / in-house sourcing", "~75% in-house; DSA ~25%", "Reconcile channel and product definitions"],
+        ["Internal collections team", "1.8× FY25 level", "Capacity, training and quality assurance"],
+        ["External agency reliance", "0.4× FY25 level", "Third-party conduct and continuity"],
+        ["Monthly Stage 3 recoveries", "₹6.5 Cr to ₹14.5 Cr", "Management-reported; confirm window/basis"],
+        ["Digital collections", ">70% of monthly collections", "Digital share is not bounce/cure rate"],
+        ["Collection efficiency", "99.7% reported", "Annual headline; not monthly bounce performance"],
+    ]},
+    note="No monthly presentment, return-code, bounce, cure or complaint dataset was supplied. Do not invent an actual result from these annual disclosures.",
+    sources=["FY26 Annual Report, supplied PDF pp.10, 13–14."]
+)
+
+_update_page(60,
+    paragraphs=[
+        "RBI's June 2026 FSR reports a credit-risk stress test on 174 NBFCs over one year. Under its business-as-usual baseline, the sample GNPA ratio was 2.4% in March 2026 and projected at 2.8% in March 2027; aggregate CRAR was 22.3% and projected at 20.8%. Medium and severe scenarios apply 1-SD and 2-SD GNPA shocks.",
+        "The plotted 20.2% and 20.0% are author calculations: RBI's reported additional CRAR reductions of 60 bp and 80 bp are subtracted from the 20.8% baseline. The sample-level minimum is 15%; the RBI says seven firms may breach it under baseline and 15 under medium/severe stress. This is sector stress evidence, not a Fedfina result, forecast or probability estimate.",
+    ],
+    bullets=[],
+    chart="sector_stress",
+    table={"headers":["RBI result", "Published actual / scenario", "Boundary"], "rows":[
+        ["March 2026 sample", "GNPA 2.4%; CRAR 22.3%", "174-NBFC system sample; not Fedfina"],
+        ["March 2027 baseline", "GNPA 2.8%; CRAR 20.8%", "Business-as-usual projection"],
+        ["Medium / severe credit stress", "Additional CRAR loss 60 / 80 bp", "1-SD / 2-SD GNPA shocks"],
+        ["NBFCs below 15% CRAR", "7 baseline; 15 medium/severe", "Firm-count distribution, not system aggregate"],
+        ["Liquidity mismatch >20%", "2 baseline; 5 medium; 6 high", "Next-year gap; stress uses 5% / 10% lower inflows and higher outflows"],
+        ["Top-three individual / group borrowers", "CRAR −230 / −240 bp; 8 NBFCs below 15%", "Extreme concentration scenarios"],
+    ]},
+    note="Chart values 20.2% and 20.0% are calculated as 20.8% − 0.6 pp and 20.8% − 0.8 pp; they are labelled stress scenarios, not observed outcomes. RBI stress-test results are hypothetical.",
+    sources=["RBI, Financial Stability Report, June 2026, Chapter II, paras. 2.64–2.68, Chart 2.30, Table 2.9 and Chart 2.31; official report page ID 1325."]
+)
+
+_update_page(61,
+    title="Post-Internship Q1 FY27 Results and Watchlist",
+    paragraphs=[
+        "The stated internship ended 3 July 2026. Fedfina's Q1 FY27 quarter ended 30 June, but its results and earnings-call materials were published 15 July—after the placement. They are included only as post-internship context. The financial results are unaudited and accompanied by a limited-review report with an unmodified conclusion; a limited review is not an audit.",
+        "Filed financial results reported operating revenue ₹669.93 crore, finance cost ₹272.69 crore, impairment ₹34.06 crore, PBT ₹153.48 crore and PAT ₹114.38 crore; EPS ₹3.05 is not annualised. Filed ratios are shown separately from operating figures and attributed management commentary below.",
+        "Management attributed the Stage 2 ratio movement (2.2% to 2.7%) partly to the move to periodic interest-due structures and regulatory change; this is commentary, not an independently established causal result. Management said the revised RBI bullet-loan LTV calculation took effect on 1 April 2026, described adopting periodic interest-due structures while remaining below regulatory limits, and attributed some elevated overdue levels to that transition. Management also cited approximately 0.8% credit cost, rounded GNPA 1.6% and NNPA 1.0%, and negative direct-assignment income of ₹13 crore while describing reduced assignment reliance as deliberate. The filed GNPA/NNPA ratios are the more precise 1.55%/0.96%.",
+    ],
+    table={"headers":["Published Q1 FY27 metric", "Value / comparator", "Evidence label"], "rows":[
+        ["AUM", "₹21,136 Cr; +35% YoY", "Management commentary"],
+        ["Disbursements", "₹6,760 Cr; +14% YoY", "Management commentary"],
+        ["Gold / Mortgage AUM", "₹11,191 Cr (+77%) / ₹9,777 Cr (+14%)", "Management commentary"],
+        ["Net interest income", "₹371.9 Cr; Q1 FY26 ₹268.2 Cr (+38.7%)", "Company Q1 press release"],
+        ["Operating profit", "₹187.5 Cr; Q1 FY26 ₹125.1 Cr (+49.9%)", "Company Q1 press release"],
+        ["PAT", "₹114.38 Cr; Q1 FY26 ₹75.01 Cr; Q4 FY26 ₹100.53 Cr", "Filed result; limited review"],
+    ]},
+    note="Q1 operating metrics and explanations are post-internship publication context, not observed internship outputs. AUM segment figures (Gold + Mortgage = ₹20,968 Cr) do not sum to total AUM ₹21,136 Cr; no residual is allocated.",
+    sources=[
+        "Fedfina, Financial Results for the Quarter Ended 30 June 2026 and Limited Review Report, 15 July 2026 (unaudited), Regulation 52(4) ratios and assignment/security-cover disclosures; official file: https://www.fedfina.com/site/assets/files/421786/financial_results_for_the_quarter_ended_june_30-_2026.pdf.",
+        "Fedfina Q1 FY27 Press Release and Earnings Call Transcript, 15 July 2026; transcript discussion of AUM, product mix, Stage 2, gold price/LTV and direct assignment: https://www.fedfina.com/site/assets/files/130670/fedbank_q1_fy27_earnings_call_transcript.pdf.",
+    ]
+)
+# Add the filed quarterly risk-ratio table as an additional compact evidence block
+# rendered below the main Q1 table on this page by the builder's optional add-on.
+PAGES[61 - 7]["secondary_table"] = {"headers":["Filed ratio", "30 Jun 2026", "31 Mar 2026"], "rows":[
+    ["CRAR", "20.71%", "22.40%"],
+    ["GNPA / NNPA", "1.55% / 0.96%", "1.87% / 1.28%"],
+    ["Liquidity coverage ratio", "157%", "152%"],
+    ["Provision coverage ratio", "38.36%", "32.29%"],
+    ["Debt-equity ratio", "4.89×", "4.61×"],
+]}
+PAGES[61 - 7]["secondary_note"] = "Filed Q1 FY27 loan transfer by assignment: ₹588.81 Cr; 37-month weighted-average residual maturity, 6-month holding period, 10% retention and 100% tangible-security coverage (as disclosed). Management's gold-price decline and LTV explanation appears on p.52."
+
+_update_page(63,
+    title="Monthly Portfolio Graphs: Preparation Workflow",
+    paragraphs=[
+        "A monthly graph should answer one defined question and allow a reviewer to reproduce the number. Begin with an approved data extract, record its cut-off and version, reconcile totals to the source system, freeze definitions, and segment the portfolio consistently. Show current month, prior month, same month last year where relevant, and plan/trigger only when authorised.",
+        "The student supplied the phrase “Graphs & ever Graphs”. This page covers the confirmed general requirement for monthly graphs without deciding what the second graph category means. Keep stock and flow separate, show numerator/denominator and population, annotate restatements and business exits, and avoid implying that a change in the graph alone establishes cause.",
+    ],
+    bullets=[
+        "AUM/disbursement: show stock and flow separately by product and vintage.",
+        "Asset quality: GNPA/NNPA, Stage 2, roll rates and cure by approved definition.",
+        "Collections: due, collected, channel, return-code and cure only where authorised data exist.",
+        "Operations: turnaround, exceptions, complaints, reconciliations and action ageing.",
+    ],
+    note="Appendix B (p.91) is a generic catalogue. Any internal field or trigger must use the company's approved definition and authorised source.",
+    sources=["FY25 Annual Report, supplied PDF p.33; FY26 Annual Report, p.13."]
+)
+
+_update_page(64,
+    title="“Graphs & ever Graphs”: Terminology Pending Confirmation",
+    paragraphs=[
+        "The student-supplied task phrase is “Preparation of Graphs & ever Graphs on monthly basis”. The meaning of “ever graphs” has not been confirmed. Early Warning Signals (EWS) is one possible interpretation because the FY25 annual report discusses EWS monitoring, but this report does not treat that interpretation as fact or as a verified internship duty. Confirm the exact internal label with the internship supervisor before final submission.",
+        "If—and only if—the supervisor confirms EWS, a useful EWS graph would show signal movement, threshold status, affected exposure, segment, ageing, root cause and action. Counts and exposure should be plotted separately; new alerts should be distinguished from persistent alerts; and false positives, confirmed deterioration and cure should be validated over an approved observation window. Thresholds must come from approved policy/model governance.",
+    ],
+    table={"headers":["Possible EWS view (conditional)", "Example display if confirmed"], "rows":[
+        ["New / open / closed alerts", "Monthly count and exposure by product/vintage"],
+        ["Ageing", "Days since trigger; owner and overdue action"],
+        ["Conversion", "Alert later entering arrears / remaining current"],
+        ["Cure / false positive", "Validated outcome using an approved observation window"],
+    ]},
+    note="Terminology is unresolved. Replace the optional EWS material if the supervisor confirms that “ever graphs” referred to a different report or chart type.",
+    sources=["FY25 Annual Report, supplied PDF p.33 (source for the existence of company EWS discussion, not for the student's task interpretation)."]
+)
+
+_update_page(66,
+    paragraphs=[
+        "RMC preparation converts ongoing monitoring into governance-level oversight. Before a meeting, reconcile monthly data, compare quarters, validate definitions and policy versions, refresh the risk register, collect owner commentary, test prior-action closure and identify decisions requested. Disagreement and uncertainty should be visible rather than suppressed.",
+        "The FY26 annual report discloses five RMC meetings on 28 April, 28 July and 17 October 2025, then 7 and 15 January 2026. This is an annual-report governance record, not the committee's minutes or proof of the specific student work delivered. The committee's published remit covers policy, product delinquency/NPA, liquidity, operational/cyber risk, BCP and Board reporting.",
+    ],
+    table={"headers":["Pack section", "Minimum evidence"], "rows":[
+        ["Executive dashboard", "Movement, exceptions, decisions and owners"],
+        ["Credit / product", "AUM, vintage, delinquency, ECL and concentration"],
+        ["Liquidity / market", "ALM gaps, stress, funding, rate/FX sensitivity"],
+        ["Non-financial", "Fraud, cyber, BCP, compliance, conduct and complaints"],
+        ["Actions", "Owner, due date, status, evidence and escalation"],
+        ["FY26 disclosed RMC record", "5 meetings; dates listed above; no minutes reproduced"],
+    ]},
+    sources=["FY26 Annual Report, supplied PDF p.53 (printed report p.100); FY25 Annual Report, supplied PDF p.33."]
+)
+
+_update_page(70,
+    paragraphs=[
+        "FY26 disclosures show AUM of ₹20,153 crore, 98.9% secured share, PAT of ₹343.6 crore, credit cost of 0.8% and a reported recovery in profitability. Product data show Gold AUM ₹10,352 crore (51.4% of AUM), MT LAP ₹5,570 crore and ST LAP ₹3,792 crore. These headline measures make product/vintage analysis more—not less—important as the portfolio scales.",
+        "The RBI's June 2026 NBFC evidence provides a sector lens: credit growth moderated to 16.6%, while its 174-firm stress test shows dispersion beneath aggregate capital strength. Fedfina's post-internship Q1 FY27 publication showed AUM ₹21,136 crore, filed GNPA 1.55% and CRAR 20.71%; these results were published after 3 July and do not evidence intern-period work. Watch ST LAP seasoning, Gold collateral/custody, longer-tenor ALM, reserve coverage, collections quality and funding/capital use.",
+    ],
+    bullets=[
+        "Growth and earnings improved in FY26; sustainability still requires cohort and cash-flow evidence.",
+        "Secured share rose to 98.9%, while collateral, legal, custody and operational risk remain material.",
+        "FY26 NNPA was 1.3% and PCR 32.3%; interpret with GNPA, write-offs and Stage mix.",
+        "RBI stress statistics are sector scenarios; Fedfina Q1 data are post-internship company context.",
+    ],
+    sources=["FY26 Annual Report, supplied PDF pp.4, 8–15, 114–118; RBI FSR, June 2026; Fedfina Q1 FY27 results, 15 July 2026."]
+)
+
+_update_page(71,
+    paragraphs=[
+        "This qualitative priority map is the author's external analytical view using public disclosures. It is not Fedfina's internal risk score, probability, appetite or residual-risk rating. The purpose is to make follow-up topics and evidence gaps visible—not to assign a company risk grade.",
+        "Product growth, negative longer-tenor contractual gap and RBI sector stress scenarios support monitoring of credit/vintage, collateral, ALM/funding and capital. Q1 FY27 statements are post-internship; the sector stress chart refers to an RBI sample. Any formal priority or mitigation decision belongs to authorised management and the Board committee.",
+    ],
+    table={"headers":["Analyst watch area", "Public evidence", "Follow-up priority"], "rows":[
+        ["ST LAP vintage / collections", "FY26 ST LAP AUM ₹3,792 Cr; post-rebuild product", "High follow-up; seek cohort/DPD data"],
+        ["Gold collateral / custody", "₹10,352 Cr AUM; 12.6 tonnes custody; Q1 LTV commentary", "High follow-up; reconcile valuation/custody"],
+        ["ALM / funding maturity", "FY26 after-one-year net gap −₹2,050.13 Cr", "High follow-up; behavioural stress"],
+        ["Capital / sector dispersion", "RBI NBFC stress sample: some firms below 15% CRAR", "Ongoing; not a Fedfina rating"],
+        ["Cyber / data / conduct", "Digital and branch-led operating model", "Ongoing control and customer outcomes"],
+    ]},
+    note="Qualitative external analyst prioritisation only; not an approved company risk rating or probability estimate.",
+    sources=["FY26 Annual Report, supplied PDF pp.8–15, 114–118; RBI FSR, June 2026, paras. 2.64–2.68."]
+)
+
+_update_page(83,
+    paragraphs=[
+        "RQ1: Fedfina's latest FY26 series shows AUM growth from ₹6,187.2 crore in FY22 to ₹20,153 crore in FY26 and PAT recovery to ₹343.6 crore after the FY25 dip. RQ2: secured AUM rose to 98.9%, while GNPA improved slightly and NNPA/provision coverage moved differently; this supports a mixed rather than one-sided credit conclusion.",
+        "RQ3: the FY26 contractual maturity table shows a negative after-one-year net gap and the report discloses separate 25 bp rate sensitivities. RQ4: monthly graph, trigger, bounce and RMC workflows can be made reproducible through controlled definitions and review. RQ5: monthly MIS, borrower-level cohorts, internal limits, bounce outcomes and RMC actions remain unavailable. RBI stress scenarios and Fedfina Q1 FY27 results are sector/post-internship context, not internship observations.",
+    ],
+    note="Answers reflect published annual-report evidence, RBI sector analysis and separately labelled post-internship context; they do not establish causality.",
+    sources=["FY26 Annual Report, supplied PDF pp.4, 14–15, 114–118; RBI FSR, June 2026; Fedfina Q1 FY27 results, 15 July 2026."]
+)
+
+_update_page(84,
+    paragraphs=[
+        "Fedbank Financial Services Limited's FY2025–26 disclosures show a larger, predominantly secured lending portfolio and higher reported profitability. Gold and Mortgage serve materially different customer, collateral and cash-flow profiles. The FY26 annual report describes work on underwriting, collections, distribution and funding; their durable effectiveness depends on validated cohort outcomes and appropriate governance.",
+        "The principal conclusion is conditional: the quality, funding and control of growth matter more than volume alone. Continued monitoring should focus on ST LAP seasoning, Gold valuation and custody, mortgage recovery, contractual and behavioural ALM, capital use, fair collections, technology resilience and customer outcomes. The RBI's sector scenarios are not company forecasts; Q1 FY27 publications are post-internship context only.",
+    ],
+    note="This is a public-source academic conclusion, not an investment opinion, assurance report or substitute for company risk judgement.",
+    sources=["FY26 Annual Report, supplied PDF pp.4, 8–15, 114–118; RBI FSR, June 2026."]
+)
+
+_update_page(85,
+    paragraphs=[
+        "The study uses company annual reports, RBI publications and public Q1 FY27 material. Annual reports provide audited financial statements alongside operational and management information with different assurance. Q1 FY27 financial results were unaudited and subject to limited review, and were published on 15 July after the 3 July internship end. Q1 earnings-call explanations are attributed management commentary.",
+        "No monthly MIS, borrower-level data, internal risk policy thresholds, RMC minutes/decks, branch observations, interviews, model validation, audit findings or monthly bounce results were supplied. Annual aggregates cannot establish causality, vintage quality, trigger breaches or a management action's effect. RBI stress tests are hypothetical sector scenarios, not Fedfina forecasts or probabilities.",
+        "Further study could use anonymised product/vintage and monthly DPD data, validate bounce-to-arrears migration and EWS performance if applicable, stress gold/property recovery and funding, and test trigger closure. Such work requires authorisation, data minimisation, confidentiality controls and supervisor confirmation of the phrase “Graphs & ever Graphs”.",
+    ],
+    bullets=[
+        "No internal numeric trigger, monthly bounce KPI or RMC decision is claimed.",
+        "Historical yield/spread/cost values differ across annual-report editions; reconciliation is disclosed.",
+        "Management commentary is not independent assurance; a limited review is not an audit.",
+        "Future analysis should use authorised, defined and anonymised data.",
+    ],
+    sources=[]
+)
+
+_update_page(86,
+    paragraphs=[
+        "A risk-analyst role connects classroom finance with operational decision-making. The same movement can mean different things depending on whether it is stock or flow, gross or net, a company average or a cohort, a filed result or commentary. A credible analyst documents source, cut-off, denominator and review status before presenting a chart.",
+        "The student-supplied workstreams include monthly graphs, the unresolved “Graphs & ever Graphs” phrase, a monthly risk paper, quarterly RMC preparation, policy-trigger-versus-actual review and bounce analysis. EWS is not assumed; it is only a possible interpretation requiring supervisor confirmation. The strongest output is a verified exception, a plausible root cause, a proportionate action and evidence of closure without compromising customer fairness or confidentiality.",
+    ],
+    bullets=[
+        "Technical learning: trend, ratio, credit, liquidity and sensitivity analysis.",
+        "Process learning: data validation, versioning, review and action tracking.",
+        "Professional learning: escalation, confidentiality and balanced interpretation.",
+    ],
+    note="This reflection describes the task workflow and learning objectives; it does not claim unverified deliverables or internal results.",
+    sources=[]
+)
+
+_update_page(87,
+    paragraphs=[
+        "A concise senior-management view should separate FY26 annual results, RBI sector context and any post-internship company update. Q1 FY27 filed ratios were CRAR 20.71%, GNPA 1.55%, NNPA 0.96%, LCR 157%, PCR 38.36% and debt-equity 4.89x at 30 June 2026. Those figures were published 15 July after the internship end; the reviewed-but-unaudited basis and management commentary are identified on p.61.",
+        "Before submission, verify student and programme details, guide wording, signatures and employer documents; ask the supervisor to confirm “Graphs & ever Graphs”; update only from authorised internal records. Blank templates are not completed internship evidence and no confidential company information is included.",
+    ],
+    table={"headers":["Final check", "Status"], "rows":[
+        ["Student / dates", "Dattaguru Patil; M16144; 4 Apr–3 Jul 2026—verify institutional style"],
+        ["FY26 actuals and source citations", "Included; annual-report definitions and historical conflicts noted"],
+        ["RBI NBFC context and scenarios", "Sector-only data; hypothetical scenarios distinguished"],
+        ["Q1 FY27", "Post-internship publication; unaudited limited review and commentary labelled"],
+        ["Graphs & ever Graphs", "Unresolved; confirm before treating the second term as EWS"],
+        ["Internal bounce / policy / RMC evidence", "Not supplied; templates remain blank"],
+        ["Employer certificate / signatures", "Not fabricated; attach authentic originals if required"],
+    ]},
+    note="Report prepared 4 October 2026; primary company focus is FY2025–26. Q1 FY27 is post-internship context only.",
+    sources=[]
+)
+
+_update_page(88,
+    paragraphs=[
+        "The following official company and regulatory publications support the figures and risk analysis. Company-specific page citations refer to the supplied PDF files; printed report pages may differ from PDF page numbers. Q1 FY27 materials were published after the internship and are included only as separately labelled context.",
+    ],
+    table={"headers":["Reference", "Use and access"], "rows":[
+        ["Fedbank Financial Services Limited, Annual Report 2023–24 (FY24), supplied PDF.", "Historical AUM, secured share and risk framework; key PDF pp.13–14, 24, 31."],
+        ["Fedbank Financial Services Limited, Annual Report 2024–25 (FY25), supplied PDF.", "Transition-year indicators, monthly EWS/RMC references; key PDF pp.12–13, 33."],
+        ["Fedbank Financial Services Limited, Annual Report 2025–26 (FY26), filed 4 Sep 2026, supplied PDF.", "Primary FY26 snapshot/products, five-year series, governance, ALM, ECL and sensitivity; PDF pp.4, 7–15, 53, 114–118."],
+        ["Reserve Bank of India, Financial Stability Report, June 2026, Chapter II, official report page ID 1325.", "NBFC sector growth and credit/liquidity stress scenarios; paras. 2.55–2.68, Charts 2.28–2.31, Table 2.9. https://www.rbi.org.in/Scripts/PublicationReportDetails.aspx?ID=1325"],
+        ["Reserve Bank of India (Lending Against Gold and Silver Collateral) Directions, 2025, Notification ID 12859.", "Applicability, policy, consumption-loan LTV tiers and ongoing LTV; paras. 4–5, 8, 17–20. https://rbi.org.in/Scripts/NotificationUser.aspx?Id=12859"],
+        ["Fedfina, Q1 FY27 Financial Results for quarter ended 30 June 2026 and Limited Review Report, 15 Jul 2026.", "Unaudited filed statement, Regulation 52(4) ratios, assignment transfer and security-cover disclosures. https://www.fedfina.com/site/assets/files/421786/financial_results_for_the_quarter_ended_june_30-_2026.pdf"],
+        ["Fedfina, Q1 FY27 Press Release and Earnings Call Transcript, 15 Jul 2026.", "Operational/product AUM and management explanations, kept separate from the filed financial results. https://www.fedfina.com/site/assets/files/130670/fedbank_q1_fy27_earnings_call_transcript.pdf"],
+    ]},
+    note="All company sources are public disclosures; RBI stress-test values are hypothetical and not company-specific. Q1 FY27 was published 12 days after the stated internship end.",
+    sources=[]
+)
+
+_update_page(89,
+    paragraphs=[
+        "Selected historical yield, cost-of-borrowings and spread values differ across annual-report editions. FY24's report gives 16.2%, 8.8% and 7.4%; FY25 repeats those FY24 values and reports FY25 at 17.4%, 9.2% and 8.1%. FY26's five-year charts instead show FY24 at 16.7%, 8.6% and 8.1%, and FY25 at 17.1%, 9.0% and 8.2%. The supplied reports do not fully reconcile these historical differences.",
+        "The report uses the latest FY26 chart series consistently rather than silently blending editions. Calculations: FY26 AUM growth = (201,530 ÷ 158,115) − 1 ≈ 27.5%; FY22–FY26 AUM CAGR = (201,530 ÷ 61,872)^(1/4) − 1 ≈ 34.3%; PAT growth = (3,436 ÷ 2,252) − 1 ≈ 52.6%. ₹ million ÷ 10 = ₹ crore; ₹ lakh ÷ 100 = ₹ crore.",
+        "The RBI stress chart uses observed sample CRAR 22.3% (Mar-26), baseline projected 20.8% (Mar-27), and author-calculated medium/severe values 20.2%/20.0% after subtracting RBI's additional 60/80 bp reductions. Q1 FY27 results were published after 3 July and are not internship observations; they are unaudited and limited-reviewed, not audited.",
+    ],
+    table={"headers":["Metric", "FY24 report: FY24", "FY26 chart: FY24", "FY25 report: FY25", "FY26 chart: FY25"], "rows":[
+        ["Yield", "16.2%", "16.7%", "17.4%", "17.1%"],
+        ["Cost of borrowings", "8.8%", "8.6%", "9.2%", "9.0%"],
+        ["Spread", "7.4%", "8.1%", "8.1%", "8.2%"],
+        ["AUM / PAT", "Consistent across reports", "Same chart series", "Consistent across reports", "Same chart series"],
+    ]},
+    note="Differences may reflect definition, methodology or reclassification; supplied reports do not fully reconcile them. Q1 FY27 figures are separately labelled post-internship context.",
+    sources=["FY24 Annual Report, supplied PDF p.13; FY25 Annual Report, p.12; FY26 Annual Report, pp.14–15; RBI FSR, June 2026, paras. 2.64–2.68."]
+)
+
+_update_page(91,
+    paragraphs=[
+        "The monthly graph pack should be compact but broad enough to reveal risk migration. A graph is complete only when its period, unit, numerator/denominator, population, source, owner and any restatement are visible. Use stable scales and annotate policy changes and portfolio exits. The optional EWS row below applies only if the supervisor confirms that the internship phrase “ever graphs” meant EWS.",
+    ],
+    table={"headers":["Graph / view", "Recommended cut", "Companion metric"], "rows":[
+        ["AUM and disbursals", "Product, vintage, geography, channel", "Delinquency and capital use"],
+        ["DPD / Stage migration", "Product, vintage, branch", "Cure, write-off and ECL"],
+        ["Bounce", "Cause, mandate, product, due cycle", "Subsequent DPD and cure"],
+        ["Collections", "Due vs received, channel, agency", "Cost-to-collect and complaints"],
+        ["Funding / ALM", "Maturity, lender, currency, reset", "Liquidity buffer and EaR"],
+        ["Operations / conduct", "Incident, complaint, branch, ageing", "Loss, repeat issue and closure"],
+        ["Optional EWS (only if confirmed)", "Signal count/exposure, vintage and age", "Validation, cure and false positives"],
+    ]},
+    note="Appendix B is a generic analytical catalogue, not a claim that all graphs were assigned or prepared during the internship.",
+    sources=[]
+)
+
+_update_page(92,
+    title="Optional EWS Register and Validation Template (If Confirmed)",
+    paragraphs=[
+        "Use this blank template only if the internship supervisor confirms that “ever graphs” meant Early Warning Signals. Otherwise, substitute the correct category. A signal should be validated before being treated as an effective rule; review both accounts that triggered and those that did not, use an approved outcome window, and record definition changes.",
+    ],
+    table={"headers":["Optional EWS field", "Entry / control"], "rows":[
+        ["Signal name / rule version", "[Insert approved label and version]"],
+        ["Population / source / frequency", "[Define eligible accounts and system]"],
+        ["Threshold / direction / effective date", "[Use only approved policy/model authority]"],
+        ["Alerts / exposure / age", "[Month-end count and amount]"],
+        ["Confirmed deterioration / cure", "[Outcome window and approved definition]"],
+        ["False positives / missed events", "[Validation sample and outcome]"],
+        ["Owner / action / due date", "[Accountable owner and closure evidence]"],
+    ]},
+    note="No EWS threshold or actual alert data is supplied. Do not paste customer identifiers into an academic report or unsecured personal file.",
+    sources=[]
+)
+
+_update_page(97,
+    paragraphs=[
+        "The series below reproduces the FY26 annual-report five-year charts. Monetary AUM values originally labelled ₹ million are converted to ₹ crore. The FY26 report's chart order has been visually checked against the PDF. Ratios are reproduced as reported, not recalculated from financial statements; selected values may differ from older report editions as noted on p.89.",
+    ],
+    table={"headers":["Metric", "FY22", "FY23", "FY24", "FY25", "FY26"], "rows":[
+        ["AUM (₹ Cr)", "6,187.2", "9,069.6", "12,191.9", "15,811.5", "20,153.0"],
+        ["PAT (₹ Cr)", "103.5", "180.1", "244.7", "225.2", "343.6"],
+        ["Yield (%)", "16.0", "16.1", "16.7", "17.1", "16.7"],
+        ["Spread (%)", "8.2", "8.3", "8.1", "8.2", "8.6"],
+        ["Cost of borrowings (%)", "7.8", "7.8", "8.6", "9.0", "8.1"],
+        ["Cost-to-income (%)", "58.4", "58.6", "58.2", "57.6", "57.2"],
+        ["ROA (%)", "1.7", "2.3", "2.4", "1.8", "2.4"],
+        ["ROE (%)", "10.4", "14.4", "13.5", "9.4", "12.6"],
+        ["GNPA / NNPA (%)", "2.2 / 1.8", "2.0 / 1.6", "1.7 / 1.3", "2.0 / 1.2", "1.9 / 1.3"],
+        ["CRAR (%)", "23.0", "17.9", "23.5", "21.9", "22.4"],
+        ["Provision coverage (%)", "22.1", "22.2", "20.4", "40.0", "32.3"],
+        ["Book value per share (₹)", "35.9", "42.1", "61.2", "68.3", "78.2"],
+    ]},
+    note="Ratios are chart-reported and rounded; AUM/PAT values are converted from ₹ million. See p.89 for differences between report editions.",
+    sources=["FY26 Annual Report, supplied PDF pp.14–15 (printed report pp.22–25)."]
+)
+
+_update_page(98,
+    paragraphs=[
+        "This log links analytical claims to source locations. It is not a completeness opinion: annual reports include further accounting notes, audit material and statutory disclosures. Consult the original source before citing a number or making a policy decision. RBI and post-internship Q1 sources are kept separate from FY26 company facts.",
+    ],
+    table={"headers":["Topic", "Disclosed fact used", "Source"], "rows":[
+        ["FY26 snapshot / products", "AUM, secured mix, NPA, PAT, Gold/ST/MT LAP", "FY26 PDF pp.4, 8–9, 13"],
+        ["Five-year trends", "AUM, PAT, pricing, quality, CRAR, returns", "FY26 PDF pp.14–15"],
+        ["RMC governance", "Terms of reference and five FY26 meeting dates", "FY26 PDF p.53"],
+        ["Maturity analysis", "Assets/liabilities by within/after-one-year bucket", "FY26 PDF pp.114–115"],
+        ["Credit / ECL", "EAD, PD, LGD, stages, SICR and collateral table", "FY26 PDF pp.116–117"],
+        ["Rate / FX", "25 bp sensitivity, ALCO and hedge narrative", "FY26 PDF p.118"],
+        ["NBFC sector / stress", "Credit growth and hypothetical credit/liquidity scenarios", "RBI FSR June 2026, paras. 2.55–2.68"],
+        ["Gold collateral regulation", "Applicability, consumption LTV and ongoing requirements", "RBI Directions 2025, paras. 4–5, 8, 17–20"],
+        ["Q1 FY27 results", "Unaudited results, ratios, assignment transfer", "Filed 15 Jul 2026; post-internship"],
+        ["Q1 FY27 commentary", "AUM/product update, Stage 2 and management explanations", "Call transcript 15 Jul 2026; post-internship"],
+    ]},
+    note="Earlier-report map: FY24 PDF pp.13–14, 24, 31; FY25 PDF pp.12–13, 33. RBI scenarios are not Fedfina forecasts.",
+    sources=[]
+)
+
+_update_page(99,
+    paragraphs=[
+        "The scenario matrix below remains unpopulated for Fedfina. Risk, Finance and business owners should approve shock sizes, horizons, correlations, management actions and model assumptions before calculation. A deterministic scenario is not a probability forecast.",
+        "The RBI NBFC-sector scenario already reported on p.60 is external published evidence, not an input or output for this company matrix. Do not copy RBI sample values into company stress cells or present them as Fedfina forecasts.",
+    ],
+    table={"headers":["Risk factor", "Base assumption", "Adverse shock", "Severe shock", "Output"], "rows":[
+        ["Gold price / LTV", "[Approved]", "[Approved]", "[Approved]", "Margin, loss, cure"],
+        ["Mortgage recovery", "[Approved]", "[Haircut / time]", "[Haircut / time]", "LGD / ECL"],
+        ["Bounce / delinquency", "[Approved]", "[Rate / roll]", "[Rate / roll]", "Collections / Stage / PAT"],
+        ["Funding cost / maturity", "[Approved]", "[bp / closure]", "[bp / closure]", "NII / liquidity / CRAR"],
+        ["Branch / system disruption", "[Approved]", "[Duration]", "[Duration]", "Service / cash / loss"],
+    ]},
+    note="All company scenario cells are placeholders. No Fedfina forecast, probability or internal risk appetite is supplied in this report.",
+    sources=[]
+)
+
+_update_page(100,
+    paragraphs=[
+        "Before submitting, verify the title, student name, programme, roll number, internship dates, guide details, signatures and authentic employer documentation. Check that the Word and PDF render as 100 pages and that every citation opens to the correct source. Confirm the phrase “Graphs & ever Graphs” with the supervisor; replace provisional EWS wording only if confirmed.",
+        "Q1 FY27 results were published 15 July, after the 3 July internship end, and must remain post-internship context. RBI NBFC stress results are sector-level hypotheticals, not Fedfina outcomes. Do not convert blank templates into internship evidence or insert internal data without authorisation.",
+    ],
+    bullets=[
+        "Why does secured AUM not eliminate borrower, collateral and operational risk?",
+        "How are GNPA, NNPA, credit cost and ECL different?",
+        "Why is a payment bounce not automatically an NPA?",
+        "What does the negative FY26 after-one-year net maturity gap imply—and not imply?",
+        "Why do older annual reports differ from the FY26 historical yield/cost series?",
+        "How would you prove a policy-trigger breach and its closure from authorised sources?",
+        "How do you distinguish RBI sector stress scenarios from Fedfina actuals?",
+        "How do you label Q1 FY27 data published after the internship?",
+        "What controls make a quarterly RMC pack decision-useful?",
+    ],
+    note="Report prepared 4 October 2026. Company primary focus: FY2025–26; Q1 FY27: post-internship context only.",
+    sources=[]
+)
+
+# Keep every EWS reference conditional where it could be confused with the
+# unresolved internship task wording.
+_update_page(12,
+    bullets=[
+        "Understand Fedfina's ownership, products, operating model and FY26 strategic direction.",
+        "Compare selected FY22–FY26 company-reported indicators using the latest annual-report series.",
+        "Assess credit, collateral, asset-quality, funding, liquidity, interest-rate, operational and conduct risks.",
+        "Explain monthly graph preparation, the unresolved “Graphs & ever Graphs” term, risk-paper, trigger-versus-actual, bounce and quarterly RMC workflows.",
+        "Identify evidence-based control improvements and limitations for further study.",
+    ]
+)
+_update_page(65,
+    paragraphs=[
+        "The monthly risk paper should be decision-oriented and short enough to review. Start with a one-page executive summary, then show portfolio trends, product/vintage quality, policy-trigger status, collections/bounce, funding/ALM where in remit, operational incidents, customer outcomes and open actions. Include an EWS section only if the supervisor confirms that the task term “ever graphs” meant EWS.",
+        "A strong narrative separates fact, interpretation and action. State the movement and denominator; identify the segment driving it; compare with an approved limit; explain plausible causes; state what remains unverified; and ask for a specific decision. Do not state that a strategy caused a change unless the data and review support the link.",
+    ],
+    bullets=[
+        "1. Executive summary and key decisions.",
+        "2. Portfolio, disbursement and vintage quality.",
+        "3. Bounce, cures, collections and write-offs; optional EWS only if confirmed.",
+        "4. Funding, liquidity, capital and market-risk exceptions.",
+        "5. Operational/cyber/compliance incidents and action tracker.",
+    ]
+)
+_update_page(69,
+    table={"headers":["Cycle", "Analyst activity", "Control"], "rows":[
+        ["Month-end", "Extract, reconcile, graph, explain exceptions", "Source-owner sign-off and version log"],
+        ["Monthly review", "Risk paper, bounce and action updates; optional EWS if confirmed", "Peer/manager review; definitions locked"],
+        ["Quarterly RMC", "Synthesis, decision requests and prior actions", "Committee secretary / risk-owner validation"],
+        ["Closeout", "Handover, learning reflection and records", "Remove confidential data from academic copy"],
+    ]}
+)
+_update_page(93,
+    table={"headers":["Page / section", "Content prompt"], "rows":[
+        ["1. Executive summary", "Three material movements; decisions required; red/amber items"],
+        ["2. Portfolio", "AUM/disbursal, product/vintage quality, concentration"],
+        ["3. Credit / collections", "DPD, bounce, cure, recovery, ECL; optional EWS only if confirmed"],
+        ["4. ALM / capital / market", "Maturity, liquidity, repricing, sensitivity, capital"],
+        ["5. Non-financial risk", "Fraud, cyber, operational, compliance, conduct"],
+        ["6. Actions", "Owner, due date, status, evidence, escalation"],
+    ]}
+)
