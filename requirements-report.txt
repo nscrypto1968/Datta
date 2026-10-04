@@ -1,0 +1,6 @@
+python-docx
+reportlab
+matplotlib
+numpy
+PyMuPDF
+openpyxl
