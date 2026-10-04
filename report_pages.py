@@ -569,7 +569,7 @@ pg("CHAPTER 8 · CONCLUSION", "Internship Learning Reflection", paragraphs=[
 ], bullets=["Technical learning: trend, ratio, credit, liquidity and sensitivity analysis.", "Process learning: data validation, versioning, review and action tracking.", "Professional learning: escalation, confidentiality and balanced interpretation."], sources=[]),
 pg("CHAPTER 8 · CONCLUSION", "Final Risk Dashboard and Submission View", paragraphs=[
     "A concise senior-management view should lead with risk appetite and material exceptions, then show portfolio quality, funding/liquidity, capital, operations, customer outcomes and remediation. Each status should be tied to an approved definition and owner. A dashboard should not bury an unresolved high-severity event among routine metrics or imply that a green annual ratio removes a localised risk.",
-    "For academic submission, verify name, roll number, programme, institution, guide and dates; replace any provisional terminology; attach only authentic employer documents; and update internal values only from authorised records. The attached workbook is a blank analytical template plus a public annual-trend sheet; it contains no confidential company data.",
+    "For academic submission, verify name, roll number, programme, institution, guide and dates; replace any provisional terminology; attach only authentic employer documents; and update internal values only from authorised records. The appendices provide blank analytical templates; no confidential company data is included.",
 ], table={"headers":["Final check", "Status"], "rows":[
     ["Student and internship details", "Provided; verify exact programme/institution style"],
     ["Annual-report data and page citations", "Included; latest-series conflicts disclosed"],
@@ -627,7 +627,7 @@ pg("APPENDIX C", "EWS Register and Validation Template", paragraphs=[
     ["Confirmed deterioration / cure", "[Outcome window and definition]"],
     ["False positives / missed events", "[Validation sample and result]"],
     ["Owner / action / due date", "[Named accountable owner and evidence]"],
-]}, note="Do not paste customer identifiers into an academic report or an unsecured workbook.", sources=[]),
+]}, note="Do not paste customer identifiers into an academic report or an unsecured personal file.", sources=[]),
 pg("APPENDIX D", "Monthly Risk-Paper Template", paragraphs=[
     "A risk paper should separate the executive conclusion from detailed backup. The summary should make the quarter/month movement, material exceptions, customer impact and decision request clear without requiring the reader to reconstruct every chart. Use an appendix for definitions and large data tables.",
 ], table={"headers":["Page / section", "Content prompt"], "rows":[
@@ -656,7 +656,7 @@ pg("APPENDIX F", "Policy Trigger-versus-Actual Register", paragraphs=[
     ["[Metric 3]", "[Approved value; MAX/MIN]", "[Value; date]", "[Within / near / breach]", "[Owner; due date]"],
 ]}, note="No actual internal limit is provided in this report. Leave blank until authorised source data is available.", sources=[]),
 pg("APPENDIX G", "Bounce-Analysis Data Template and Formulas", paragraphs=[
-    "Use one row per reporting month and product/segment. If the workbook is populated, validate the formulas, ensure that retry attempts are counted consistently, and use a unique instalment key to prevent duplication. Rates below are undefined where the denominator is zero; blank input must not be interpreted as zero performance.",
+    "Use one row per reporting month and product/segment. If this template is populated with authorised data, validate the formulas, ensure that retry attempts are counted consistently, and use a unique instalment key to prevent duplication. Rates below are undefined where the denominator is zero; blank input must not be interpreted as zero performance.",
 ], table={"headers":["Month / segment", "Valid presentments", "Bounced", "Presented ₹", "Returned ₹", "Count rate", "Amount rate"], "rows":[
     ["[Month / product]", "[n]", "[n]", "[₹]", "[₹]", "Bounced ÷ valid", "Returned ÷ presented"],
     ["[Month / product]", "[n]", "[n]", "[₹]", "[₹]", "[Formula]", "[Formula]"],

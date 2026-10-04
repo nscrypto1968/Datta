@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the academic report and companion risk-monitoring workbook.
+"""Build the academic report as an editable Word document and a PDF.
 
 Inputs are the three supplied Fedfina annual reports and Rashmi Gupta's
 reference project PDF. The employer-certificate page is intentionally not
@@ -40,12 +40,6 @@ from docx.shared import Inches, Pt, RGBColor
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
-from openpyxl import Workbook, load_workbook
-from openpyxl.chart import LineChart, Reference
-from openpyxl.styles import Font, PatternFill, Border, Side, Alignment
-from openpyxl.worksheet.datavalidation import DataValidation
-from openpyxl.formatting.rule import FormulaRule
-from openpyxl.utils import get_column_letter
 
 ROOT = Path(__file__).resolve().parent
 REFERENCE_PDF = ROOT / "Rashmi Gupta Project.pdf"
@@ -54,7 +48,6 @@ FY25_PDF = ROOT / "Annual reports of Fedbank FY 25.pdf"
 FY26_PDF = ROOT / "Annual reports of Fedbank FY 26.pdf"
 DOCX_OUT = ROOT / "Summer Intership Project final By DP.docx"
 PDF_OUT = ROOT / "Risk Analysis at Fedbank Financial Services Ltd - Dattaguru Patil.pdf"
-XLSX_OUT = ROOT / "Fedfina Risk Analyst Internship Workbook.xlsx"
 
 NAVY = "#17466B"
 BLUE = "#2F759D"
@@ -894,190 +887,6 @@ def build_docx(charts: dict[str, Path], crest: Path, letterhead: Path):
     doc.save(DOCX_OUT)
 
 
-# ---------- Companion workbook ----------
-
-def style_sheet(ws, title_row=1, header_row=3):
-    ws.sheet_view.showGridLines=False
-    ws.freeze_panes=f"A{header_row+1}"
-    ws.sheet_properties.pageSetUpPr.fitToPage=True
-    ws.page_setup.fitToWidth=1; ws.page_setup.fitToHeight=0
-    ws.sheet_view.zoomScale=90
-    for cell in ws[title_row]:
-        if cell.value is not None:
-            cell.font=Font(name="Aptos Display", size=15, bold=True, color="FFFFFF")
-            cell.fill=PatternFill("solid",fgColor="17466B")
-            cell.alignment=Alignment(vertical="center")
-    ws.row_dimensions[title_row].height=27
-    for cell in ws[header_row]:
-        if cell.value is not None:
-            cell.font=Font(name="Aptos", size=10, bold=True, color="FFFFFF")
-            cell.fill=PatternFill("solid",fgColor="2F759D")
-            cell.alignment=Alignment(wrap_text=True, vertical="center")
-    ws.row_dimensions[header_row].height=34
-    thin=Side(style="thin",color="D5DEE5")
-    for row in ws.iter_rows(min_row=header_row+1):
-        for cell in row:
-            cell.border=Border(bottom=thin)
-            cell.alignment=Alignment(vertical="top",wrap_text=True)
-            if cell.value is not None:
-                cell.font=Font(name="Aptos", size=9, color="25323A")
-
-
-def build_workbook():
-    wb=Workbook()
-    ws=wb.active; ws.title="Start Here"
-    ws.sheet_view.showGridLines=False
-    ws.merge_cells("A1:F1"); ws["A1"]="Fedfina Risk Analyst Internship Workbook"
-    ws["A1"].font=Font(name="Aptos Display",size=16,bold=True,color="FFFFFF"); ws["A1"].fill=PatternFill("solid",fgColor="17466B")
-    ws.row_dimensions[1].height=30
-    intro=[
-        ("Purpose","Blank academic templates for monthly graphs/EWS, policy triggers, bounce analysis, risk papers and quarterly RMC preparation."),
-        ("Company-data year","FY2025–26 annual-report trend data is included on the FY26 Trend tab; FY26 is the primary analytical period."),
-        ("No invented MIS","Monthly, bounce and internal policy values are intentionally blank. No borrower-level data or internal thresholds were supplied."),
-        ("Confidentiality","Populate only in an authorised environment with approved, minimised data. Do not commit confidential workbooks to Git."),
-        ("Metric definitions","Confirm source, cut-off, denominator, retry rules and policy version before use. The approved Fedfina definitions take precedence."),
-        ("Workbook limitation","Formulas are templates and must be checked against company systems and reporting rules before operational use."),
-        ("Student","Dattaguru Patil · Roll No. M16144 · Risk Analyst Intern · 4 Apr–3 Jul 2026"),
-    ]
-    ws.append(["Topic","Guidance"])
-    for row in intro: ws.append(list(row))
-    ws.column_dimensions["A"].width=24; ws.column_dimensions["B"].width=105
-    ws.freeze_panes="A3"
-    for cell in ws[2]: cell.font=Font(bold=True,color="FFFFFF"); cell.fill=PatternFill("solid",fgColor="2F759D")
-    for r in range(3,10):
-        ws.cell(r,1).font=Font(bold=True,color="17466B")
-        ws.cell(r,2).alignment=Alignment(wrap_text=True,vertical="top")
-        ws.row_dimensions[r].height=33
-    ws.sheet_view.zoomScale=90
-
-    trend=wb.create_sheet("FY26 Trend")
-    trend.append(["Company-Reported Five-Year Trend | ₹ crore unless noted"])
-    trend.append(["Source: Fedfina Annual Report 2025–26, supplied PDF pp.14–15. Latest series used consistently; historical definitions may differ from prior reports."])
-    trend.append(["Metric","Unit","FY22","FY23","FY24","FY25","FY26","FY26 YoY"])
-    rows=[
-        ["AUM","₹ Cr",*AUM_CR], ["PAT","₹ Cr",*PAT_CR], ["Yield","%",*YIELD], ["Spread","%",*SPREAD],
-        ["Cost of borrowings","%",*COF], ["Cost-to-income","%",*COST_INCOME], ["ROA","%",*ROA], ["ROE","%",*ROE],
-        ["GNPA","%",*GNPA], ["NNPA","%",*NNPA], ["Provision coverage","%",*PCR], ["CRAR","%",*CRAR],
-    ]
-    for row in rows:
-        trend.append(row+[f'=IFERROR((G{trend.max_row+1}/F{trend.max_row+1})-1,"")'])
-    style_sheet(trend,1,3)
-    trend.merge_cells("A1:H1"); trend.merge_cells("A2:H2")
-    trend["A2"].font=Font(name="Aptos",size=9,italic=True,color="66737E"); trend["A2"].alignment=Alignment(wrap_text=True)
-    trend.row_dimensions[2].height=30
-    trend.column_dimensions["A"].width=25; trend.column_dimensions["B"].width=13
-    for col in range(3,9): trend.column_dimensions[get_column_letter(col)].width=13
-    for r in range(4,trend.max_row+1):
-        if trend.cell(r,2).value=="%":
-            for c in range(3,8): trend.cell(r,c).number_format="0.0"
-            trend.cell(r,8).number_format="0.0%"
-        else:
-            for c in range(3,8): trend.cell(r,c).number_format="#,##0.0"
-            trend.cell(r,8).number_format="0.0%"
-    # Charts linked to the public annual trend data.
-    ch=LineChart(); ch.title="AUM trend (₹ Cr)"; ch.y_axis.title="₹ crore"; ch.x_axis.title="Financial year"; ch.height=7; ch.width=14
-    ch.add_data(Reference(trend,min_col=3,max_col=7,min_row=4,max_row=4),from_rows=True,titles_from_data=False)
-    ch.set_categories(Reference(trend,min_col=3,max_col=7,min_row=3))
-    ch.series[0].graphicalProperties.line.solidFill="17466B"; ch.series[0].graphicalProperties.line.width=26000
-    trend.add_chart(ch,"A18")
-    ch2=LineChart(); ch2.title="Asset quality trend (%)"; ch2.y_axis.title="Percent"; ch2.height=7; ch2.width=14
-    ch2.add_data(Reference(trend,min_col=3,max_col=7,min_row=12,max_row=13),from_rows=True,titles_from_data=False)
-    ch2.set_categories(Reference(trend,min_col=3,max_col=7,min_row=3))
-    trend.add_chart(ch2,"H18")
-
-    monthly=wb.create_sheet("Monthly Data")
-    headers=["Month","Product / segment","AUM (₹ Cr)","Disbursals (₹ Cr)","Collections due (₹ Cr)","Collections received (₹ Cr)","Valid presentments (#)","Bounced presentments (#)","Amount presented (₹)","Amount returned (₹)","GNPA (%)","NNPA (%)","Stage 2 (%)","Cost of funds (%)","Credit cost (%)","Collection efficiency (%)","Count bounce rate (%)","Amount bounce rate (%)","Source / owner","Comments"]
-    monthly.append(["Monthly Risk Dashboard Input | Populate only from authorised MIS"])
-    monthly.append(["Blank by design. Confirm definitions, period cut-off, retry handling, source owner and policy version before use."])
-    monthly.append(headers)
-    for r in range(4,40):
-        monthly.cell(r,16,f'=IF(OR(E{r}="",F{r}=""),"",IFERROR(F{r}/E{r},""))')
-        monthly.cell(r,17,f'=IF(OR(G{r}="",H{r}=""),"",IFERROR(H{r}/G{r},""))')
-        monthly.cell(r,18,f'=IF(OR(I{r}="",J{r}=""),"",IFERROR(J{r}/I{r},""))')
-        for c in range(11,19): monthly.cell(r,c).number_format="0.0%"
-    style_sheet(monthly,1,3); monthly.merge_cells("A1:T1"); monthly.merge_cells("A2:T2")
-    monthly["A2"].font=Font(name="Aptos",size=9,italic=True,color="66737E"); monthly["A2"].alignment=Alignment(wrap_text=True)
-    widths=[15,19,15,17,19,21,20,21,20,19,13,13,13,17,15,22,19,21,20,34]
-    for i,width in enumerate(widths,1): monthly.column_dimensions[get_column_letter(i)].width=width
-    product_dv=DataValidation(type="list",formula1='"Gold,ST LAP,MT LAP,Home Loan,Other"',allow_blank=True)
-    monthly.add_data_validation(product_dv); product_dv.add("B4:B39")
-    # monthly trend charts: blank until actual values are entered.
-    c1=LineChart(); c1.title="Monthly AUM by segment (₹ Cr)"; c1.y_axis.title="₹ Cr"; c1.x_axis.title="Month"; c1.height=7; c1.width=14
-    c1.add_data(Reference(monthly,min_col=3,max_col=3,min_row=3,max_row=39),titles_from_data=True); c1.set_categories(Reference(monthly,min_col=1,min_row=4,max_row=39)); monthly.add_chart(c1,"A42")
-    c2=LineChart(); c2.title="Bounce rates (monthly)"; c2.y_axis.title="Rate"; c2.x_axis.title="Month"; c2.height=7; c2.width=14
-    c2.add_data(Reference(monthly,min_col=17,max_col=18,min_row=3,max_row=39),titles_from_data=True); c2.set_categories(Reference(monthly,min_col=1,min_row=4,max_row=39)); monthly.add_chart(c2,"J42")
-
-    triggers=wb.create_sheet("Policy Triggers")
-    triggers.append(["Policy Trigger vs Actual | Internal limits intentionally blank"])
-    triggers.append(["Use current approved policy values and direction. MAX: breach if actual exceeds limit. MIN: breach if actual falls below limit. Preserve every breach and closure event."])
-    triggers.append(["Metric / policy clause","Direction (MAX/MIN)","Approved limit","Actual","As of date","Status","Headroom","Owner","Root cause / action","Due date","Closure evidence"])
-    for r in range(4,24):
-        triggers.cell(r,6,f'=IF(OR(A{r}="",B{r}="",C{r}="",D{r}=""),"DATA NEEDED",IF(B{r}="MAX",IF(D{r}>C{r},"BREACH","WITHIN"),IF(B{r}="MIN",IF(D{r}<C{r},"BREACH","WITHIN"),"CHECK DIRECTION")))')
-        triggers.cell(r,7,f'=IF(OR(C{r}="",D{r}=""),"",IF(B{r}="MAX",C{r}-D{r},D{r}-C{r}))')
-    style_sheet(triggers,1,3); triggers.merge_cells("A1:K1"); triggers.merge_cells("A2:K2")
-    triggers["A2"].font=Font(name="Aptos",size=9,italic=True,color="66737E"); triggers["A2"].alignment=Alignment(wrap_text=True); triggers.row_dimensions[2].height=32
-    for i,width in enumerate([28,19,17,15,16,19,15,20,38,15,34],1): triggers.column_dimensions[get_column_letter(i)].width=width
-    dv=DataValidation(type="list",formula1='"MAX,MIN"',allow_blank=True); triggers.add_data_validation(dv); dv.add("B4:B23")
-    triggers.conditional_formatting.add("F4:F23",FormulaRule(formula=['F4="BREACH"'],fill=PatternFill("solid",fgColor="F4CCCC"),font=Font(color="9C0006",bold=True)))
-    triggers.conditional_formatting.add("F4:F23",FormulaRule(formula=['F4="WITHIN"'],fill=PatternFill("solid",fgColor="D9EAD3"),font=Font(color="274E13")))
-
-    bounce=wb.create_sheet("Bounce Analysis")
-    bounce.append(["Bounce Analysis | Blank template — not company results"])
-    bounce.append(["Define valid presentments, retry treatment, return-code taxonomy and cure window before calculating any rate."])
-    bounce.append(["Month","Product / segment","Presentments (#)","Bounced (#)","Amount presented (₹)","Amount returned (₹)","Count bounce rate","Amount bounce rate","Cured within window (#)","Cure rate","Repeat-bounce accounts (#)","Repeat rate","Primary return reason","Source / owner","Notes"])
-    for r in range(4,40):
-        bounce.cell(r,7,f'=IF(OR(C{r}="",D{r}=""),"",IFERROR(D{r}/C{r},""))')
-        bounce.cell(r,8,f'=IF(OR(E{r}="",F{r}=""),"",IFERROR(F{r}/E{r},""))')
-        bounce.cell(r,10,f'=IF(OR(D{r}="",I{r}=""),"",IFERROR(I{r}/D{r},""))')
-        bounce.cell(r,12,f'=IF(OR(C{r}="",K{r}=""),"",IFERROR(K{r}/C{r},""))')
-        for c in (7,8,10,12): bounce.cell(r,c).number_format="0.0%"
-    style_sheet(bounce,1,3); bounce.merge_cells("A1:O1"); bounce.merge_cells("A2:O2")
-    bounce["A2"].font=Font(name="Aptos",size=9,italic=True,color="66737E"); bounce["A2"].alignment=Alignment(wrap_text=True); bounce.row_dimensions[2].height=31
-    for i,width in enumerate([15,19,18,16,20,20,20,21,23,15,24,17,30,21,35],1): bounce.column_dimensions[get_column_letter(i)].width=width
-
-    paper=wb.create_sheet("Monthly Risk Paper")
-    paper.append(["Monthly Risk Paper | Working outline"])
-    paper.append(["Populate using authorised sources. Separate fact, interpretation, action and decision request."])
-    paper.append(["Section","Prompt","Reporting period","Source / owner","Reviewer comments","Status / action owner"])
-    prompts=[
-        ("Executive summary","Material movements, breaches, decisions required"),
-        ("Portfolio / vintage","AUM, disbursals, product/vintage quality, concentration"),
-        ("Credit / EWS","DPD, Stage movement, EWS alerts, cure and ECL"),
-        ("Bounce / collections","Presentments, return codes, cure, recovery, conduct"),
-        ("Funding / ALM","Maturity, liquidity, repricing, FX/hedge, concentration"),
-        ("Operational / cyber","Incidents, audit findings, BCP, vendor and data quality"),
-        ("Customer / compliance","Complaints, regulatory change, service and conduct"),
-        ("Actions","Owner, due date, evidence, overdue items and escalation"),
-    ]
-    for sec,prompt in prompts: paper.append([sec,prompt,"","","",""])
-    style_sheet(paper,1,3); paper.merge_cells("A1:F1"); paper.merge_cells("A2:F2")
-    paper["A2"].font=Font(name="Aptos",size=9,italic=True,color="66737E"); paper["A2"].alignment=Alignment(wrap_text=True); paper.row_dimensions[2].height=30
-    for i,width in enumerate([25,56,20,27,34,29],1): paper.column_dimensions[get_column_letter(i)].width=width
-    for r in range(4,12): paper.row_dimensions[r].height=42
-
-    rmc=wb.create_sheet("RMC Pack")
-    rmc.append(["Quarterly RMC Pack | Preparation and Action Log"])
-    rmc.append(["Template only. Confirm the current Risk Management Committee terms of reference and approved internal reporting requirements."])
-    rmc.append(["Agenda item","Quarter / period","Key movement / issue","Evidence / source","Decision requested","Action owner","Due date","Status / closure evidence"])
-    agenda=["Risk appetite / policy","Credit portfolio / product EWS","NPA / collections / bounce","Liquidity / ALM / funding","Capital / interest-rate / FX","Operational / fraud","Cyber / third party / BCP","Compliance / conduct / customer","Prior committee actions"]
-    for item in agenda: rmc.append([item,"","","","","","",""])
-    style_sheet(rmc,1,3); rmc.merge_cells("A1:H1"); rmc.merge_cells("A2:H2")
-    rmc["A2"].font=Font(name="Aptos",size=9,italic=True,color="66737E"); rmc["A2"].alignment=Alignment(wrap_text=True); rmc.row_dimensions[2].height=32
-    for i,width in enumerate([31,19,43,30,34,22,17,38],1): rmc.column_dimensions[get_column_letter(i)].width=width
-    for r in range(4,13): rmc.row_dimensions[r].height=38
-
-    # Global workbook tab color and properties.
-    for sheet in wb.worksheets:
-        sheet.sheet_properties.tabColor="17466B"
-    wb.calculation.fullCalcOnLoad=True
-    wb.calculation.forceFullCalc=True
-    wb.calculation.calcMode="auto"
-    wb.properties.title="Fedfina Risk Analyst Internship Workbook"
-    wb.properties.creator="Dattaguru Patil"
-    wb.properties.subject="FY2025-26 public trend series and blank risk-monitoring templates"
-    wb.save(XLSX_OUT)
-
-
 def main():
     with tempfile.TemporaryDirectory(prefix="fedfina_report_", dir=str(ROOT)) as tmp:
         workdir=Path(tmp)
@@ -1085,10 +894,8 @@ def main():
         charts=save_charts(workdir)
         build_pdf(charts,crest,letterhead)
         build_docx(charts,crest,letterhead)
-    build_workbook()
     print(f"Created {PDF_OUT.name}")
     print(f"Created {DOCX_OUT.name}")
-    print(f"Created {XLSX_OUT.name}")
     print(f"Report pages: {6+len(PAGES)}")
 
 

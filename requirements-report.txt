@@ -3,4 +3,3 @@ reportlab
 matplotlib
 numpy
 PyMuPDF
-openpyxl
